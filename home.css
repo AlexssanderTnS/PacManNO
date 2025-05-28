@@ -64,12 +64,6 @@ div.navbar a{
     color: #f506fdf5;
 }
 
-nav.link{
-    padding: 20px;
-    gap: 19px;
-    background-color: aqua;
-}
-
 
 nav a:hover{
     color: #FCBD00;
