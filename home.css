@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+body{
+    background-image: url(PACMAN1.png);
+    height: 100vh;
+}
+
+
+header.freakbar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1%;
+    background-color:#2B2306;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 130px;
+
+}
+
+div.logo img{
+    height: 150px;
+}
+
+div.logo img:hover{
+    transform: scale(1.5);
+    
+
+}
+
+
+h1{
+    color: #FCBD00;
+    
+}
+
+div.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    justify-content: space-around;
+}
+
+div.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    font-size: 18px;
+    gap: 5%;
+}
+
+div.navbar a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f506fdf5;
+}
+
+nav.link{
+    padding: 20px;
+    gap: 19px;
+    background-color: aqua;
+}
+
+
+nav a:hover{
+    color: #FCBD00;
+    cursor: pointer;
+}
