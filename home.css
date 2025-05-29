@@ -7,17 +7,21 @@
 }
 
 body{
-    background-image: url(PACMAN1.png);
+    background-image: url(/imgs/labirinto.png);
+    width: 100%;
     height: 100vh;
+    /* background-color: rgb(26, 4, 1); */
+    justify-content: center;
+    align-items: center;
 }
 
 
-header.freakbar{
+header.nerdbar{
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 1%;
-    background-color:#2B2306;
+    background-color:#302f2f;
     flex-direction: row;
     justify-content: space-between;
     height: 130px;
@@ -27,17 +31,49 @@ header.freakbar{
 div.logo img{
     height: 150px;
 }
+/* 
+@keyframes gira-sem-parar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-div.logo img:hover{
-    transform: scale(1.5);
-    
+.logo img{
+  animation: gira-sem-parar 2s linear infinite;
+} */
+div.logo img:hover {
+    transform: rotate(1800deg);
+    transition: transform 3s ease;
 
 }
 
+div.Banner-Principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pacman{
+    width: 40%;
+    height: 40%;
+}
+
+#banner{
+    width: 50%;
+    height: 40%;
+}
+
+h2{
+    color: violet;
+}
 
 h1{
     color: #FCBD00;
-    
+    font-style: italic;
+    font-size: 30px;
 }
 
 div.logo{
@@ -64,6 +100,11 @@ div.navbar a{
     color: #f506fdf5;
 }
 
+nav{
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
 
 nav a:hover{
     color: #FCBD00;
