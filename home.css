@@ -9,7 +9,7 @@
 body{
     background-image: url(/imgs/labirinto.jpg);
     width: 100%;
-    height: 100vh;
+    height: 160vh;
     /* background-color: rgb(65, 49, 46); 
     justify-content: center;
     align-items: center; */
@@ -20,6 +20,7 @@ header{
       top: 0;        /* Posiciona no topo */
       left: 0;       /* Posiciona à esquerda */
       width: 100%;     /* Ocupa toda a largura da janela */
+    border-bottom: solid #FCBD00;
 }
 
 header.nerdbar{
@@ -53,7 +54,7 @@ div.logo img{
 } */
 div.logo img:hover {
     transform: rotate(1800deg);
-    transition: transform 3s ease;
+    transition: transform 1s ease;
 
 }
 
@@ -61,6 +62,10 @@ div.Banner-Principal{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2%;
+    gap: 5%;
 }
 
 #pacman{
@@ -116,4 +121,12 @@ nav{
 nav a:hover{
     color: #FCBD00;
     cursor: pointer;
+}
+
+
+#pacgelo {
+    float: right; /* Ou float: right para a direita */
+    width: 200px; /* Defina a largura desejada */
+    height: auto; /* A altura será proporcional à largura */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
 }
