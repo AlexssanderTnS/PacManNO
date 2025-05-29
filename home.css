@@ -130,3 +130,11 @@ nav a:hover{
     height: auto; /* A altura será proporcional à largura */
     margin-right: 20px; /* Espaço entre a imagem e o texto */
 }
+
+#pacgelo:hover{
+    transform: scale(1.2);
+}
+
+#pacfogo:hover{
+    transform: scale(1.2);
+}
