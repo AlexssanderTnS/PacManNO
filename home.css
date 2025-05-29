@@ -7,14 +7,20 @@
 }
 
 body{
-    /* background-image: url(/imgs/labirinto.png); */
+    background-image: url(/imgs/labirinto.jpg);
     width: 100%;
     height: 100vh;
-    background-color: rgb(65, 49, 46); 
+    /* background-color: rgb(65, 49, 46); 
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
+header{
+      position: sticky; /* Fixa o cabeçalho no topo */
+      top: 0;        /* Posiciona no topo */
+      left: 0;       /* Posiciona à esquerda */
+      width: 100%;     /* Ocupa toda a largura da janela */
+}
 
 header.nerdbar{
     display: flex;
@@ -25,6 +31,7 @@ header.nerdbar{
     flex-direction: row;
     justify-content: space-between;
     height: 130px;
+    position: sticky;
 
 }
 
