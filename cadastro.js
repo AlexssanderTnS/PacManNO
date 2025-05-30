@@ -1,25 +1,19 @@
-const  usuarioCadastrado = {
-    email:"email@exemplo.com",
-    senha: dawdawd,
-};
-function limparUsuario(){
-    document.getElementById('usuario').value='';
+const usuarioCadastrado = {
+    email: "email@exemplo.com",
+    senha: "senhaa",
 };
 
-//Limpar senha
-function limparSenha(){
-    document.getElementById('senha').value=''; 
-};
-//Cadastro
-function cadastro(){
+const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
+const senhaPadrao = /^[a-zA-Z]{6,}$/;
 
-};
+// Limpar usuário
+function limparUsuario() {
+    document.getElementById('usuario').value = '';
+}
+
+// Limpar senha
+function limparSenha() {
+    document.getElementById('senha').value = '';
+}
 
 
-//Conferir se o login está certo
-function login(){
-    document.getElementById('usuario').value;
-    document.getElementById('senha').value;
-
-    
-};
