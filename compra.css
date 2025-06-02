@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: #320d50;
+}
+
+
+
+div.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    font-size: 18px;
+    gap: 5%;
+    background-color: #1b0020;
+}
+
+header.freakbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1%;
+    background-color: #0a000e;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 130px;
+
+}
+
+h1 {
+    color: #a7a6a6;
+    margin-right: auto;
+    background-color: #0a000e;
+    
+}
+
+
+
+nav a:hover {
+    color: #ded4e6;
+    cursor: pointer;
+
+}
+
+.theme {
+    width: 230px;
+    height: auto;
+    nav-down: auto;
+}
