@@ -18,7 +18,7 @@
 
   PacManNO/
   ├── Jogo/
-  │   └── pacman-master/
+  └── pacman-master/
   ├── imgs/
   ├── cadastro.html
   ├── cadastro.css
