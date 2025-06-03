@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modo Pacman / Mario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s, color 0.5s;
+      margin: 0; padding: 20px;
+      text-align: center;
+    }
+
+    /* Tema Pacman - fundo preto, texto amarelo */
+    body.pacman {
+      background-color: #000;
+      color: #fce303;
+    }
+
+    /* Tema Mario - fundo azul claro, texto vermelho */
+    body.mario {
+      background-color: #a7d8f7;
+      color: #e63946;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    /* Botão com cores conforme tema */
+    body.pacman button {
+      background-color: #fce303;
+      color: #000;
+    }
+
+    body.mario button {
+      background-color: #e63946;
+      color: #fff;
+    }
+
+    /* Imagem tema */
+    #imagem-tema {
+      width: 300px;
+      height: 200px;
+      object-fit: contain;
+      border: 3px solid currentColor;
+      border-radius: 10px;
+      transition: all 0.5s;
+    }
+
+    /* Espaço grande pra scrollar */
+    .content-space {
+      height: 1000px;
+    }
+  </style>
+</head>
+<body class="pacman">
+  <button id="toggle-theme">Trocar para Mario</button>
+
+  <h1>Bem-vindo ao mundo Pacman / Mario</h1>
+  <p>Role a página pra ver as imagens mudarem conforme o scroll e tema.</p>
+
+  <img id="imagem-tema" src="/imgs/fala.png" alt="Imagem tema" />
+
+  <div class="content-space"></div>
+
+  <script>
+    const body = document.body;
+    const btn = document.getElementById('toggle-theme');
+    const img = document.getElementById('imagem-tema');
+
+    // Arrays de imagens pra cada tema e faixa de scroll
+    const imagensPacman = ['pacman1.png', 'pacman2.png', 'pacman3.png'];
+    const imagensMario = ['mario1.png', 'mario2.png', 'mario3.png'];
+
+    function atualizarImagem() {
+      const scrollPos = window.scrollY;
+
+      let imgSet = body.classList.contains('pacman') ? imagensPacman : imagensMario;
+
+      if (scrollPos < 200) {
+        img.src = imgSet[0];
+      } else if (scrollPos < 400) {
+        img.src = imgSet[1];
+      } else {
+        img.src = imgSet[2];
+      }
+    }
+
+    btn.addEventListener('click', () => {
+      if (body.classList.contains('pacman')) {
+        body.classList.remove('pacman');
+        body.classList.add('mario');
+        btn.textContent = 'Trocar para Pacman';
+      } else {
+        body.classList.remove('mario');
+        body.classList.add('pacman');
+        btn.textContent = 'Trocar para Mario';
+      }
+      atualizarImagem();
+    });
+
+    window.addEventListener('scroll', atualizarImagem);
+
+    // Inicializa imagem correta na carga
+    atualizarImagem();
+  </script>
+</body>
+</html>
