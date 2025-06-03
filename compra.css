@@ -14,8 +14,9 @@ div.navbar {
     justify-content: space-around;
     padding: 1%;
     font-size: 18px;
-    gap: 5%;
+    gap: 20%;
     background-color: #1b0020;
+    
 }
 
 header.freakbar {
@@ -45,8 +46,8 @@ nav a:hover {
 
 }
 
-.theme {
-    width: 230px;
+img.theme {
+    width: 200px;
     height: auto;
-    nav-down: auto;
+    
 }
