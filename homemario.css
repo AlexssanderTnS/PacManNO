@@ -16,7 +16,7 @@ html {
 
 
 body {
-    background-image: url(/Mario/Super\ Mario\ Bros\ 3\ Wallpaper.jfif);
+    background-image: url(/Mario/FundoMario.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -73,6 +73,7 @@ div.Banner-Principal {
 #mario {
     width: 20%;
     height: 60%;
+
 }
 
 #banner {
@@ -131,6 +132,9 @@ nav a:hover {
 .camisa {
     width: 500px;
     height: 500px;
+   
+
+
 }
 
 
@@ -141,10 +145,13 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3%;
-
 }
 
-div.card {
-    position: relative;
-    z-index: 20;
+div.card{
+    gap: 5%;
+    flex-direction: row;
+    background-image: url(/Mario/Base.png);
+    background-size:100% 100%;
+    margin: 2%;
 }
+
