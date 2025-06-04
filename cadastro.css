@@ -1,5 +1,43 @@
 *{
-    box-sizing: border-box;
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
+
+body{
+    background-image: url(imgs/labirinto.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parte1{
+    background-color: rgb(6, 11, 108);
+    padding: 40px 30px;
+    width: 500px;
+    height: 1130px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
+    text-align: center;
+}
+
+.parte1 input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 3px solid #f2ff03;  
+    border-radius: 6px;
+    font-size: 14px; 
+    background-color: rgb(7, 24, 99);
+    font-size: 14px;
+}
+
+input::placeholder{
+    color: rgb(146, 141, 141);
+    opacity: 10px;
+
+}
+
+
