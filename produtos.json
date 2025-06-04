@@ -1,0 +1,30 @@
+// produtos.json
+{
+  "chloe": {
+    "nome": "Camisa Chloe",
+    "imagem": "/CP/1 camisa chloe preta sem fundo.png",
+    "descricao": "Estilo e personalidade com Chloe!",
+    "preco": "89,90"
+  },
+  "anya": {
+    "nome": "Camisa Anya",
+    "imagem": "/CP/1 anya camisa preta sem fundo.png",
+    "descricao": "A fofura espiã que todos amam.",
+    "preco": "84,90"
+  }
+
+  "scott":{
+     "nome": "Camisa Scott Pilgram"
+     "imagem": ""
+     "descricao": "O Maior lutador de Ontário"
+     "preco": "86,70"
+  }
+
+  "goku": {
+    "nome": "Camisa Goku instinto superior"
+    "imagem":""
+    "descricao":"Saiajyn boladao"
+    "preco": "88,90"
+  }
+
+}
