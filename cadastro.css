@@ -5,7 +5,8 @@
 }
 
 body{
-    background-image: url(imgs/labirinto.jpg);
+    background-image: url(imgs/teste\ ppt.png);
+
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     display: flex;
@@ -31,13 +32,29 @@ body{
     border-radius: 6px;
     font-size: 14px; 
     background-color: rgb(7, 24, 99);
-    font-size: 14px;
+
 }
 
 input::placeholder{
     color: rgb(146, 141, 141);
     opacity: 10px;
+}
 
+#generos{
+    background-color: yellow;
+    width: 50%;
+    height: 30px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: medium;
+    align-items: center;
+   
+}
+#date{
+   background-color: yellow;
+   color: black;
+
+    
 }
 
 
