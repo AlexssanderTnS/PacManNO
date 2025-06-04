@@ -11,20 +11,23 @@
     "imagem": "/CP/1 anya camisa preta sem fundo.png",
     "descricao": "A fofura espiã que todos amam.",
     "preco": "84,90"
-  }
-
-  "scott":{
-     "nome": "Camisa Scott Pilgram"
-     "imagem": ""
-     "descricao": "O Maior lutador de Ontário"
+  },
+  "scott": {
+     "nome": "Camisa Scott Pilgram",
+     "imagem": "",
+     "descricao": "O Maior lutador de Ontário",
      "preco": "86,70"
-  }
+  },
 
   "goku": {
-    "nome": "Camisa Goku instinto superior"
-    "imagem":""
-    "descricao":"Saiajyn boladao"
+    "nome": "Camisa Goku instinto superior",
+    "imagem":"",
+    "descricao":"Saiajyn boladao",
     "preco": "88,90"
+  },
+  "rdr2": {
+    "nome": "Camisa Read Dead Redemption",
+
   }
 
 }
