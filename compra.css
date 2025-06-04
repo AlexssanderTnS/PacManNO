@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 600;
+}
+
+
+html{
+   scroll-behavior: smooth;
+}
+
+
+body {
+  background-image: url(/imgs/labirinto.jpg);
+  width: 100%;
+  font-family: 'Fredoka One', sans-serif;
+  height: 400vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: solid #FCBD00;
+}
+
+header.nerdbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1%;
+  background-color: #302f2f;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 130px;
+  position: sticky;
+  z-index: 100;
+
+}
+
+div.logo img {
+  height: 150px;
+  padding: 3%;
+}
+
+
+div.logo img:hover {
+  transform: rotate(720deg);
+  transition: transform 1s ease;
+
+}
+
+
+h1 {
+  color: #FCBD00;
+  font-style: italic;
+  font-size: 30px;
+}
+
+div.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-style: italic;
+  justify-content: space-around;
+}
+
+div.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+  font-size: 18px;
+  gap: 5%;
+}
+
+div.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f506fdf5;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #FCBD00;
+  cursor: pointer;
+}
+
+div.minaazul img {
+    height: 650px;
+    width: 650px;
+    margin-left: 15%;
+    margin-top: 6%;
+    
+
+
+
+
+
+
+}
