@@ -18,8 +18,6 @@ html{
 body {
   background-image: url(/imgs/labirinto.jpg);
   width: 100%;
-  display:flex;
-  justify-content:center;
   font-family: 'Fredoka One', sans-serif;
   height: 400vh;
 }
@@ -391,3 +389,5 @@ div.pacman {
       1100px 65px 0 0 white;
   }
 }
+
+
