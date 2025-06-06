@@ -12,6 +12,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10%;
+
 }
 
         /*h1*/
@@ -20,7 +22,7 @@ h1{
     font-size: 25px;
     margin: 10px;
     height: 100px;
-    
+    padding: 5%;
     color: #f2ff03;
 }
         /*box do cadastro*/
