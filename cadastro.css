@@ -27,8 +27,9 @@ h1{
 .parte1{
     background-color: rgb(6, 11, 108);
     padding: 50px 50px;
-    width: 500px;
-    height: 1250px;
+    width: 520px;
+    height: auto;
+    margin-top: 580px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
     text-align: center;
@@ -39,6 +40,7 @@ h1{
     width: 100%;
     padding: 20px;
     margin: 10px 0;
+    margin-top: 15px;
     border: 3px solid #f2ff03;  
     border-radius: 6px;
     font-size: 14px; 
@@ -58,20 +60,62 @@ input::placeholder{
 #generos{
     background-color: yellow;
     width: 50%;
-    height: 30px;
+    height: 40px;
     margin: 10px;
     border-radius: 6px;
     font-size: medium;
     align-items: center;
+    
    
 }
+option{
+    background-color: yellow;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
 
          /*data*/
 #date{
    background-color: yellow;
    color: black;
 
-    
 }
 
+#pronto{
+  background-color: yellow;
+    color: black ;
+    width: 35%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5%;
+    border: 0px solid;
+    border-radius: 5%;
+    float: left ;
+    box-shadow: 0 0 15px #ffff00;
+
+}
+
+.pacman-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffff00;
+}
+
+#limpar{
+     background-color: yellow;
+    color: black ;
+    width: 35%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5%;
+    border: 0px solid;
+    border-radius: 5%;
+    float: right ;
+    box-shadow: 0 0 15px #ffff00;
+}
 
