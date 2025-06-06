@@ -1,32 +1,23 @@
 {
-  "chloe": {
+  "1": {
     "nome": "Camisa Chloe",
     "imagem": "/CP/1 camisa chloe preta sem fundo.png",
     "descricao": "Estilo e personalidade com Chloe!",
     "preco": 89.90
   },
-  "anya": {
-    "nome": "Camisa Anya",
-    "imagem": "/CP/1 anya camisa preta sem fundo.png",
-    "descricao": "A fofura espiã que todos amam.",
-    "preco": 84.90
-  },
-  "scott": {
+    "2": {
     "nome": "Camisa Scott Pilgram",
     "imagem": "/CP/scott.png",
     "descricao": "O maior lutador de Ontário.",
     "preco": 86.70
   },
-  "goku": {
-    "nome": "Camisa Goku Instinto Superior",
-    "imagem": "/CP/goku.png",
-    "descricao": "Saiyajin boladão!",
-    "preco": 88.90
+  "3": {
+    "nome": "Camisa Anya",
+    "imagem": "/CP/1 anya camisa preta sem fundo.png",
+    "descricao": "A fofura espiã que todos amam.",
+    "preco": 84.90
   },
-  "rdr2": {
-    "nome": "Camisa Red Dead Redemption",
-    "imagem": "/CP/rdr2.png",
-    "descricao": "Estilo western pra domar qualquer olhar.",
-    "preco": 92.50
-  }
-}
+  "4": {
+    "nome": "Camisa Far cry 3",
+    "imagem":"/CP/1 camisa far cry 3 preta sem fundo.png"
+  },
