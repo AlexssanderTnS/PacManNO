@@ -1,0 +1,20 @@
+
+body{
+    background-image: url(imgs/cad.labirinto.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form{
+    box-sizing: border-box;
+    background-color: aquamarine;
+    display: flex;
+    padding: 5%;
+    gap: 5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
