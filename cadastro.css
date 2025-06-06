@@ -121,3 +121,20 @@ option{
     box-shadow: 0 0 15px #ffff00;
 }
 
+.form button:hover{
+    background-color: red;
+}
+
+/*Mensagem de erro*/
+.botao-campo p{
+    color: red;
+    font-size: 1em;
+    visibility: hidden;
+}
+.botao-campo.error input{
+    border-color: red;
+
+}
+.botao-campo.error p {
+    visibility: visible;
+}
