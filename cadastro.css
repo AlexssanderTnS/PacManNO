@@ -5,8 +5,8 @@
 }
 
 body{
-    background-image: url(imgs/teste\ ppt.png);
-
+    background-image: url(imgs/cad.labirinto.png);
+    font-family: 'Press Start 2P', monospace;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     display: flex;
@@ -14,19 +14,30 @@ body{
     align-items: center;
 }
 
+        /*h1*/
+h1{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 25px;
+    margin: 10px;
+    height: 100px;
+    
+    color: #f2ff03;
+}
+        /*box do cadastro*/
 .parte1{
     background-color: rgb(6, 11, 108);
-    padding: 40px 30px;
+    padding: 50px 50px;
     width: 500px;
-    height: 1130px;
+    height: 1250px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
     text-align: center;
 }
 
+        /*inputs*/
 .parte1 input{
     width: 100%;
-    padding: 12px;
+    padding: 20px;
     margin: 10px 0;
     border: 3px solid #f2ff03;  
     border-radius: 6px;
@@ -35,11 +46,15 @@ body{
 
 }
 
+
+         /*coloração das fontes dos inputs*/
 input::placeholder{
     color: rgb(146, 141, 141);
     opacity: 10px;
 }
 
+
+         /*select*/
 #generos{
     background-color: yellow;
     width: 50%;
@@ -50,6 +65,8 @@ input::placeholder{
     align-items: center;
    
 }
+
+         /*data*/
 #date{
    background-color: yellow;
    color: black;
