@@ -6,8 +6,10 @@ const email = document.getElementById("emailCadastro")
 const usuario = document.getElementById("usuarioCadastro")
 const nome = document.getElementById("senhaCadastro")
 const form = document.getElementById("form")
-
 const botao = document.getElementById("pronto")
+const campos = document.querySelectorAll('.botao-campo input')
+
+
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{6,}$/;
 
@@ -23,17 +25,11 @@ form.addEventListener("submit", (evento) => {
 
 
 
-// Limpar usuário
-function limparUsuario() {
-    document.getElementById('usuario').value = '';
-}
-
-// Limpar senha
-function limparSenha() {
-    document.getElementById('senha').value = '';
-}
 
 
+
+
+//Validação
 function checkEmail(){
     const emailValue = email.value
     if (!emailPadrao.test(emailValue)){
@@ -42,6 +38,23 @@ function checkEmail(){
 
 
 }
+
+function checkUsuario(){
+    const usuarioValue = usuario.value
+
+    
+}
+
+// Limpar senha
+function limparSenha() {
+    document.getElementById('senha').value = '';
+}
+// Limpar usuário
+function limparUsuario() {
+    document.getElementById('usuario').value = '';
+}
+
+//function que mostra a mensagem de erro
 function entradaErro(entrada, mensagem){
     const formItem = entrada.parentElement
     const mensagemTexto = formItem.querySelector('p')
@@ -53,8 +66,18 @@ function entradaErro(entrada, mensagem){
     formItem.className = "botao-campo error"
 }
 
-function checkUsuario(){
-    const usuarioValue = usuario.value
 
-    
+//function para tirar a mensagem de erro
+function limparErro(entrada){
+    const formItem = entrada.parentElement;
+    const mensagemTexto = formItem.querySelector('p');
+
+    mensagemTexto.innerText =""; //vai limpar a mensagem
+    formItem.className = "botao-campo"; // vai remover a classe erro
 }
+
+campos.forEach (campo => {
+    campo.addEventListener('input', () =>{
+        limparErro(campo)
+    })
+})
