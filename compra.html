@@ -32,16 +32,18 @@
     </header>
 
     <div class="minaazul">
-        <img src="/CP/1 camisa chloe preta sem fundo.png">
-    
+        <img id="imagem-produto" src="" alt="Imagem do Produto" />
     </div>
-    
-    
+
+
     <div class="caixa">
-        <div class="preco">R$89,90</div>
+        <h2 id="nome-produto">Nome do Produto</h2>
+        <p id="descricao-produto">Descrição aqui...</p>
+        <div class="preco" id="preco-produto">R$ --,--</div>
         <div class="parcelamento">em 12x R$16,99 "Sem Juros"</div>
+
         <label for="tamanho">Tamanho:</label>
-        <select id="tamanho" name="tamanho">       
+        <select id="tamanho" name="tamanho">
             <option value="P">P</option>
             <option value="M">M</option>
             <option value="G">G</option>
@@ -49,6 +51,8 @@
         </select>
     </div>
 
+
+    <script src="produtos.js"></script>
 
 </body>
 

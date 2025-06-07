@@ -16,3 +16,10 @@ jQuery(document).ready(function(){
 });	
 
 
+document.querySelectorAll('.camisa').forEach(img => {
+  img.addEventListener('click', () => {
+    const id = img.getAttribute('data-id');
+    window.location.href = `compra.html?id=${id}`;
+  });
+});
+

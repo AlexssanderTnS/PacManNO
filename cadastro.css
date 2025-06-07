@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
 *{
     margin:0;
     padding:0;
@@ -5,29 +9,44 @@
 }
 
 body{
-    background-image: url(imgs/teste\ ppt.png);
-
+    background-image: url(imgs/cad.labirinto.png);
+    font-family: 'Press Start 2P', monospace;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10%;
+
 }
 
+        /*h1*/
+h1{
+    font-family: 'Press Start 2P', monospace;
+    font-size: 25px;
+    margin: 10px;
+    height: 100px;
+    padding: 5%;
+    color: #f2ff03;
+}
+        /*box do cadastro*/
 .parte1{
     background-color: rgb(6, 11, 108);
-    padding: 40px 30px;
-    width: 500px;
-    height: 1130px;
+    padding: 50px 50px;
+    width: 520px;
+    height: auto;
+    margin-top: 580px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
     text-align: center;
 }
 
+        /*inputs*/
 .parte1 input{
     width: 100%;
-    padding: 12px;
+    padding: 20px;
     margin: 10px 0;
+    margin-top: 15px;
     border: 3px solid #f2ff03;  
     border-radius: 6px;
     font-size: 14px; 
@@ -35,26 +54,92 @@ body{
 
 }
 
+
+         /*coloração das fontes dos inputs*/
 input::placeholder{
     color: rgb(146, 141, 141);
     opacity: 10px;
 }
 
+
+         /*select*/
 #generos{
     background-color: yellow;
     width: 50%;
-    height: 30px;
+    height: 40px;
     margin: 10px;
     border-radius: 6px;
     font-size: medium;
     align-items: center;
+    
    
 }
+option{
+    background-color: yellow;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+
+         /*data*/
 #date{
    background-color: yellow;
    color: black;
 
-    
 }
 
+#pronto{
+  background-color: yellow;
+    color: black ;
+    width: 35%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5%;
+    border: 0px solid;
+    border-radius: 5%;
+    float: left ;
+    box-shadow: 0 0 15px #ffff00;
+
+}
+
+.pacman-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffff00;
+}
+
+#limpar{
+     background-color: yellow;
+    color: black ;
+    width: 35%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 5%;
+    border: 0px solid;
+    border-radius: 5%;
+    float: right ;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+.form button:hover{
+    background-color: red;
+}
+
+/*Mensagem de erro*/
+.botao-campo p{
+    color: red;
+    font-size: 1em;
+    visibility: hidden;
+}
+.botao-campo.error input{
+    border-color: red;
+
+}
+.botao-campo.error p {
+    visibility: visible;
+}
 
