@@ -56,5 +56,5 @@ function entradaErro(entrada, mensagem){
 function checkUsuario(){
     const usuarioValue = usuario.value
 
-    if 
+    
 }
