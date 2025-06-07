@@ -12,14 +12,13 @@ const campos = document.querySelectorAll('.botao-campo input')
 
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{6,}$/;
+const usuarioPadrao = /^[a-z A-Z]{6,80}]/
 
 
 //Botão enviar
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
     checkEmail();
-
-
 });
 
 
@@ -75,7 +74,7 @@ function limparErro(entrada){
     mensagemTexto.innerText =""; //vai limpar a mensagem
     formItem.className = "botao-campo"; // vai remover a classe erro
 }
-
+//Loop que limpa todos os inputs
 campos.forEach (campo => {
     campo.addEventListener('input', () =>{
         limparErro(campo)
