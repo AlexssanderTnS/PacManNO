@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <script src="cadastro.js" defer></script>
     <title>Login</title>
 </head>
+
 <body>
 
- <!-- Elfsight Accessibility | Untitled Accessibility -->
+    <!-- Elfsight Accessibility | Untitled Accessibility -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-83aa97ad-0880-4eca-bd74-60848db2daa1" data-elfsight-app-lazy></div>
 
+<<<<<<< HEAD
 <form id="formCadastro">
     
     <!--Botão do usuário-->
@@ -27,16 +30,36 @@
     <button type="button" id="botao-senha" onclick="limparSenha()">Limpar</button>
     <p>Erro</p>
 </div>
+=======
+>>>>>>> 2eb09fbcace6eff8ea47af7a5503e15cc6668cab
 
-<div class="enviar" id="enviar">
-    <!--Botão de enviar o login-->
-    <button type="submit" class="botao-funcao" id="enviar">Enviar</button>
-</div>    
+       
+        <section>
+            <h1>Corre pra fazer seu Login!</h1>
+            <img src="imgs\pacmanonld.png" alt="">
+            <form id="formCadastro">
+                <!--Botão do usuário-->
+                <div class="container" id="id">
+                    <input class="botao-campo" type="text" id="usuario" placeholder="Digite seu nome de usuário">
+                    <button type="button" id="botao-usuario" onclick="limparUsuario()">Limpar</button>
+                    <p>Erro</p>
+                </div>
+                <!--Botão da senha-->
+                <div class="container" id="container">
+                    <input class="botao-campo" type="password" id="senha" placeholder="Digite sua senha">
+                    <button type="button" id="botao-senha" onclick="limparSenha()">Limpar</button>
+                    <p>Erro</p>
+                </div>
+                <div class="enviar" id="enviar">
+                    <!--Botão de enviar o login-->
+                    <button type="submit" class="botao-funcao" id="enviar">Enviar</button>
+                </div>
+                <!--Botão que envia para a tela de cadastro-->
+                <a class="botao-funcao" href="cadastro.html">Cadastro</a>
+            </form>
+        </section>
 
-    <!--Botão que envia para a tela de cadastro-->
-    <a class="botao-funcao" href="cadastro.html">Cadastro</a>
-
-</form>
 
 </body>
+
 </html>

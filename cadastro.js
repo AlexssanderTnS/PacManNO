@@ -11,10 +11,12 @@ const botao = document.getElementById("pronto")
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{6,}$/;
 
+
 //Botão enviar
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
     checkEmail();
+
 
 });
 
@@ -51,3 +53,8 @@ function entradaErro(entrada, mensagem){
     formItem.className = "botao-campo error"
 }
 
+function checkUsuario(){
+    const usuarioValue = usuario.value
+
+    if 
+}
