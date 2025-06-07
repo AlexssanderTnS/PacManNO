@@ -119,7 +119,8 @@ div.minaazul{
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     margin-left: 50%;
     margin-bottom: 100px;
-    
+    column-rule-style: groove;
+
 }
 
 .preco {
@@ -127,8 +128,10 @@ div.minaazul{
     font-weight: bold;
     color: #ffcc00;
     margin-top: 1px;
+    cursor: alias;
 
 }    
+
 .parcelamento {
     font-size: 20px;
     font-weight: bold;
@@ -148,4 +151,5 @@ label {
 select {
     font-size: 16px;
     padding: 10px;
+    cursor: pointer;
 }
