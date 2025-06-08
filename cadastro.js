@@ -11,8 +11,9 @@ const campos = document.querySelectorAll('.botao-campo input')
 
 
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
-const senhaPadrao = /^[a-zA-Z]{6,}$/;
-const usuarioPadrao = /^[a-z A-Z]{6,80}]/
+const senhaPadrao = /^[a-zA-Z]{8}$/;
+const nomePadrao = /^[a-z A-Z]{6,80}]$/
+const usuarioPadrao = /^[a-z A-Z]{6}/
 
 
 //Botão enviar
