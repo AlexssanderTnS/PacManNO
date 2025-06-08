@@ -4,9 +4,10 @@ const usuarioCadastrado = {
 };
 const email = document.getElementById("emailCadastro")
 const usuario = document.getElementById("usuarioCadastro")
-const nome = document.getElementById("senhaCadastro")
 const form = document.getElementById("form")
 const botao = document.getElementById("pronto")
+const senha = document.getElementById("senhaCadastro")
+const conSenha = document.getElementById("confirmar")
 const campos = document.querySelectorAll('.botao-campo input')
 
 
@@ -19,7 +20,10 @@ const usuarioPadrao = /^[a-z A-Z]{6}/
 //Botão enviar
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
-    checkEmail();
+    checkEmail()
+    checkUsuario()
+    checkSenha()
+    compaSenha()
 });
 
 
@@ -41,8 +45,25 @@ function checkEmail(){
 
 function checkUsuario(){
     const usuarioValue = usuario.value
-
+    if (!usuarioPadrao.test(usuarioValue)){
+        entradaErro(usuario,"Usuário inválido")
+    }
     
+}
+function checkSenha(){
+    const senhaValue = senha.value
+
+    if(!senhaPadrao.test(senhaValue)){
+        entradaErro(senha, "Senha inválida")
+    }
+}
+//Comparação das senhas
+function compaSenha(){
+    const conSenhaValue = conSenha.value
+    const senhaValue = senha.value
+    if (senhaValue != conSenhaValue){
+        entradaErro(conSenha, "As senhas devem ser iguais")
+    }
 }
 
 // Limpar senha
@@ -59,10 +80,7 @@ function entradaErro(entrada, mensagem){
     const formItem = entrada.parentElement
     const mensagemTexto = formItem.querySelector('p')
 
-    mensagemTexto.innerText = mensagem
-
-    console.log("Mostrando erro para:", entrada.id)
-
+    mensagemTexto.innerText = mensagem    
     formItem.className = "botao-campo error"
 }
 
