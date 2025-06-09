@@ -30,3 +30,7 @@ Bem-vindo à **NerdCore**, uma loja online fictícia de camisetas com temática 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/AlexssanderTnS/NerdCore.git
+
+
+   ![Feito com: HTML • CSS • JS • JSON](./nerdcore_badge.png)
+
