@@ -37,7 +37,7 @@
   "6": {
     "nome": "Gorillaz",
     "imagem": "/CP/1 camisa gorillaz preta sem fundo.png",
-    "descricao":"------------------------",
+    "descricao":"",
     "preco":84.90
   },
 
@@ -100,7 +100,7 @@
   "15":{
     "nome":"The last of us",
     "imagem":"/CP/1 camisa the last of us preta sem fundo.png",
-    "descricao":"------------------------",
+    "descricao":"Tecido: Algodão encorpado, para enfrentar qualquer desafio.",
     "preco":84.90
   }
 }
