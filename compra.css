@@ -96,20 +96,27 @@ nav a:hover {
 }
 
 
-   /*camisa*/
+/*camisa*/
 
-div.minaazul img{
-    height: 700px;
-    width: 600px;
+section {
     display: flex;
-    margin-top: 100px;
-    margin-right: 800px;
+    /* justify-content: space-evenly; */
+    align-content: stretch;
+    flex-direction: row;
 }
 
 
-     /*div camisa*/
+div.minaazul img {
+    height: 700px;
+    width: 600px;
+    display: flex;
+   
+}
 
-div.minaazul{
+
+/*div camisa*/
+
+div.minaazul {
     height: 10px;
     width: -20px;
     margin-left: 15%;
@@ -118,34 +125,34 @@ div.minaazul{
 }
 
 
-        /*caixa de compra*/
+/*caixa de compra*/
 
 .caixa {
     background-color: #0a0a2a;
     padding: 100px;
     border-radius: 15px;
-    display: inline-block;
+    /* display: inline-block; */
     box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
-    margin-left: 55%;
-    margin-bottom: 100px;
-    column-rule-style: groove;
-    
+    /* margin-left: 55%; */
+    position: relative;
+    top: 93px;
+    left: 30px;
 }
 
 
 
-     /*preço*/
+/*preço*/
 
 .preco {
     font-size: 40px;
     font-weight: bold;
     color: #ffcc00;
     margin-bottom: 10px;
-    
 
-}    
 
-    /*Parcelamento*/
+}
+
+/*Parcelamento*/
 
 .parcelamento {
     font-size: 25px;
@@ -155,19 +162,19 @@ div.minaazul{
     padding: 10px;
     border-radius: 15px;
     margin-bottom: 15px;
-    cursor:unset;
+    cursor: unset;
 }
 
-     /*Tamanho*/
+/*Tamanho*/
 
 label {
     font-size: 20px;
     color: #fafafa;
     margin-right: 20px;
-    
+
 }
 
-          /*caixa do tamanho*/
+/*caixa do tamanho*/
 
 select {
     font-size: 16px;
@@ -179,7 +186,7 @@ select {
     background-color: #cfc7ec;
 }
 
- /*famoso salva vidas, não mexam nisso ou mato alguem hoje*/
+/*famoso salva vidas, não mexam nisso ou mato alguem hoje*/
 
 div.comp h1 {
     font-size: 60px;
@@ -188,17 +195,27 @@ div.comp h1 {
 }
 
 
-      /*Complementos*/
+/*Complementos*/
 
-.caixa #descricao-produto  {
-    font-size: 24px;
-    margin-bottom: 60px;
-
-
-}
 
 .caixa #nome-produto {
     font-size: 50px;
     margin-bottom: 5px;
-    color: #220ce972;
+    color: #e9c80cf8;
+}
+
+.caixa #descricao-produto {
+    font-size: 24px;
+    margin-bottom: 60px;
+    color: #ffffff;
+
+}
+
+.minaazul #clue {
+    width: 220px;
+    height: 220px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    box-sizing: ;
+
 }
