@@ -135,7 +135,8 @@ main {
   align-items: center; /* Centraliza verticalmente */
   flex-direction: row; /* Direção horizontal */
   flex-wrap: wrap; /* Quebra linha se necessário */
-  gap: 3%; /* Espaço entre itens */
+  padding: 1%; /* Espaçamento interno */
+  gap: 1%; /* Espaço entre itens */
   width: 100%; /* Largura total */
 }
 
@@ -166,12 +167,20 @@ div.card a {
   text-transform: uppercase; /* Letras maiúsculas */
   margin-top: 10px; /* Espaço acima */
 }
-
 div.card a:hover {
   color: #f506fdf5; /* Cor ao passar o mouse */
+  
+}
+
+@keyframes link-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15) rotate(-3deg); }
+  70% { transform: scale(0.95) rotate(2deg); }
+  100% { transform: scale(1); }
 }
 
 div.card:hover {
+  animation: link-bounce 0.5s; /* Animação ao passar o mouse */
   transform: scale(1.02); /* Aumenta o card ao passar o mouse */
   box-shadow: 0px 0px 30px #FCBD00; /* Sombra amarela */
 }
