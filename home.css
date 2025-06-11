@@ -1,378 +1,296 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Importa fonte do Google Fonts */
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Fredoka One', sans-serif;
-  font-weight: 600;
-
+  padding: 0; /* Remove o espaçamento interno padrão */
+  margin: 0; /* Remove o espaçamento externo padrão */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  font-family: 'Press Start 2P', monospace; /* Define fonte padrão */
+  font-weight: 500; /* Define peso da fonte */
 }
-
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-
-
-
+  scroll-behavior: smooth; /* Suaviza o scroll */
+  overflow-x: hidden; /* Esconde rolagem horizontal */
+  scroll-padding-top: 130px; /* Espaço para header fixo */
+  /* Isso garante que o conteúdo não fique escondido atrás do header fixo */
 }
 
-
 body {
-  background-image: url(/imgs/labirinto.jpg);
-  width: 100%;
-  font-family: 'Fredoka One', sans-serif;
-  height: 350vh;
-
+  background-image: url(/imgs/labirinto.jpg); /* Define imagem de fundo */
+  width: 100%; /* Largura total */
+  font-family: 'Fredoka One', sans-serif; /* Fonte alternativa */
+  height: 350vh; /* Altura da página */
 }
 
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: solid #FCBD00;
-
+  position: sticky; /* Fixa o header no topo ao rolar */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total */
+  border-bottom: solid #e5e900; /* Borda inferior amarela */
 }
 
 header.nerdbar {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 1%;
-  background-color: #302f2f;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 130px;
-  position: sticky;
-  z-index: 100;
-
+  display: flex; /* Layout flexível */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 15px; /* Espaço entre itens */
+  padding: 1%; /* Espaçamento interno */
+  background-color: #302f2f; /* Cor de fundo */
+  flex-direction: row; /* Direção horizontal */
+  justify-content: space-between; /* Espaço entre itens */
+  height: 130px; /* Altura do header */
+  position: sticky; /* Fixa ao rolar */
+  z-index: 100; /* Sobrepõe outros elementos */
 }
 
 div.logo img {
-  height: 150px;
-  padding: 3%;
+  height: 150px; /* Altura da logo */
+  padding: 3%; /* Espaçamento interno */
 }
-
-
 
 div.logo img:hover {
-  transform: rotate(720deg);
-  transition: transform 1s ease;
-  
-}
-
-div.Banner-Principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 2%;
-  gap: 5%;
-  position: relative;
-  top: -57px;
-  left: 0;
-
-  z-index: 10;
-
-  text-align: center;
-
-}
-
-
-
-#pacman {
-  width: 40%;
-  height: 40%;
-}
-
-#banner {
-  width: 50%;
-  height: 40%;
-  
-}
-
-h2 {
-  color: violet;
-}
-
-h1 {
-  color: #FCBD00;
-  font-style: italic;
-  font-size: 30px;
+  transform: rotate(720deg); /* Gira a logo ao passar o mouse */
+  transition: transform 1s ease; /* Animação suave */
 }
 
 div.logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-style: italic;
-  justify-content: space-around;
+  display: flex; /* Layout flexível */
+  flex-direction: row; /* Direção horizontal */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-transform: uppercase; /* Letras maiúsculas */
+  font-style: italic; /* Itálico */
+  justify-content: space-around; /* Espaço ao redor dos itens */
 }
 
 div.navbar {
-  display: flex;
-  justify-content: space-around;
-  padding: 1%;
-  font-size: 18px;
-  gap: 5%;
+  display: flex; /* Layout flexível */
+  justify-content: space-around; /* Espaço ao redor dos links */
+  padding: 1%; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho da fonte */
+  gap: 5%; /* Espaço entre links */
 }
 
 div.navbar a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #e5e900;
+  text-decoration: none; /* Remove sublinhado */
+  text-transform: uppercase; /* Letras maiúsculas */
+  color: #e5e900; /* Cor do texto */
 }
 
 nav {
-  display: flex;
-  gap: 25px;
-  font-size: 18px;
+  display: flex; /* Layout flexível */
+  gap: 25px; /* Espaço entre itens */
+  font-size: 10px; /* Tamanho da fonte */
 }
 
 nav a:hover {
-  color: #f400fc;
-  cursor: pointer;
+  color: #f400fc; /* Cor ao passar o mouse */
+  cursor: pointer; /* Cursor de ponteiro */
 }
 
+div.Banner-Principal {
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  box-sizing: border-box; /* Inclui padding/border no tamanho */
+  width: 100%; /* Largura total */
+  padding: 2%; /* Espaçamento interno */
+  gap: 5%; /* Espaço entre itens */
+  position: relative; /* Posição relativa */
+  top: -57px; /* Sobe o banner */
+  left: 0; /* Alinha à esquerda */
+  z-index: 10; /* Sobrepõe outros elementos */
+  text-align: center; /* Centraliza texto */
+}
 
+#pacman {
+  width: 40%; /* Largura do elemento */
+  height: 40%; /* Altura do elemento */
+}
 
+#banner {
+  width: 50%; /* Largura do banner */
+  height: 40%; /* Altura do banner */
+}
+
+h2 {
+  color: violet; /* Cor do subtítulo */
+}
+
+h1 {
+  font-family: 'Press Start 2P', monospace; /* Fonte do título */
+  font-size: 25px; /* Tamanho do título */
+  padding: 5%; /* Espaçamento interno */
+  color: #f2ff03; /* Cor do título */
+}
 
 .camisa {
-  width: 500px;
-  height: 500px;
+  width: 500px; /* Largura da imagem */
+  height: 500px; /* Altura da imagem */
 }
-
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3%;
-
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: row; /* Direção horizontal */
+  flex-wrap: wrap; /* Quebra linha se necessário */
+  gap: 3%; /* Espaço entre itens */
+  width: 100%; /* Largura total */
 }
 
+
 div.card {
-  position: relative;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 400px;
-  background-color: rgba(0, 0, 0, 0.308);
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px #000;
-  margin: 20px;
-  padding: 20px;
-  transition: transform 0.3s ease;
-
-
+  position: relative; /* Posição relativa */
+  z-index: 20; /* Sobrepõe outros elementos */
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Direção vertical */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  width: 260px; /* Largura do card */
+  height: 320px; /* Altura do card */
+  background-color: rgba(0, 0, 0, 0.308); /* Fundo semitransparente */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0px 0px 20px #000; /* Sombra */
+  margin: 20px; /* Espaçamento externo */
+  padding: 10px; /* Espaçamento interno */
+  transition: transform 0.3s ease; /* Animação suave */
 }
 
 div.card a {
-  text-decoration: none;
-  color: #FCBD00;
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 10px;
-
+  text-decoration: none; /* Remove sublinhado */
+  color: #FCBD00; /* Cor do link */
+  font-size: 25px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza texto */
+  font-weight: bold; /* Negrito */
+  text-transform: uppercase; /* Letras maiúsculas */
+  margin-top: 10px; /* Espaço acima */
 }
 
 div.card a:hover {
-  color: #f506fdf5;
-  
+  color: #f506fdf5; /* Cor ao passar o mouse */
 }
 
 div.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 30px #FCBD00;
+  transform: scale(1.02); /* Aumenta o card ao passar o mouse */
+  box-shadow: 0px 0px 30px #FCBD00; /* Sombra amarela */
 }
 
 div.card img {
-  width: 100%;
-  height: 250px;
-  border-radius: 10px;
-  object-fit: cover;
+  width: 100%; /* Largura total */
+  height: 250px; /* Altura fixa */
+  border-radius: 10px; /* Bordas arredondadas */
+  object-fit: cover; /* Cobre o espaço mantendo proporção */
 }
-
-#pacgelo {
-  width: 300px;
-  height: 310px;
-  position: absolute;
-  top: 156%;
-  left: 80%;
-  z-index: 25;
-  margin-left: 80px;
-  padding: 2%;
-}
-
-#pacfogo {
-  width: 320px;
-  height: 390px;
-  position: absolute;
-  padding: 2%;
-
-  top: 209%;
-  right: 85%;
-  z-index: 25;
-  margin-left: 80px;
-}
-
 
 div.Btop {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 5%;
-  position: absolute;
-  top: 320%;
-  left: 90%;
-  transform: translateX(-50%);
-  z-index: 30;
-  width: 100%;
+  display: flex; /* Layout flexível */
+  flex-direction: row-reverse; /* Direção invertida */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 5%; /* Espaço entre itens */
+  position: absolute; /* Posição absoluta */
+  top: 320%; /* Distância do topo */
+  left: 90%; /* Distância da esquerda */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 30; /* Sobrepõe outros elementos */
+  width: 100%; /* Largura total */
 }
 
 div.Btop a {
-  text-decoration: none;
+  text-decoration: none; /* Remove sublinhado */
 }
 
 div.Btop p{
- color: #FCBD00;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-right: 16px;
-    position: relative;
-    right: 900px;
-    top: 238px;
-
+  color: #FCBD00; /* Cor do texto */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  text-transform: uppercase; /* Letras maiúsculas */
+  margin-right: 16px; /* Espaço à direita */
+  position: relative; /* Posição relativa */
+  right: 900px; /* Move para a esquerda */
+  top: 238px; /* Move para baixo */
 }
+
 #fala {
-  width: 20%;
-  position: relative;
-  left: 77px;
+  width: 20%; /* Largura do elemento */
+  position: relative; /* Posição relativa */
+  left: 77px; /* Move para a direita */
 }
 
 .old {
-  position: relative;
-  top: 178px;
-
+  position: relative; /* Posição relativa */
+  top: 178px; /* Move para baixo */
 }
 
-
 div.pacman {
-  position: absolute;
-  top: 75%;
-  left: 42%;
+  position: absolute; /* Posição absoluta */
+  top: 75%; /* Distância do topo */
+  left: 42%; /* Distância da esquerda */
 }
 
 .pacman-top {
-  background-color: yellow;
-  height: 100px;
-  width: 200px;
-  border-radius: 100px 100px 0 0;
-  animation: spin1 0.5s infinite linear;
+  background-color: yellow; /* Cor do topo do pacman */
+  height: 100px; /* Altura */
+  width: 200px; /* Largura */
+  border-radius: 100px 100px 0 0; /* Bordas arredondadas em cima */
+  animation: spin1 0.5s infinite linear; /* Animação de abrir a boca */
 }
 
 .pacman-bottom {
-  background-color: yellow;
-  height: 100px;
-  width: 200px;
-  border-radius: 0 0 100px 100px;
-  animation: spin2 0.5s infinite linear;
+  background-color: yellow; /* Cor da parte de baixo */
+  height: 100px; /* Altura */
+  width: 200px; /* Largura */
+  border-radius: 0 0 100px 100px; /* Bordas arredondadas embaixo */
+  animation: spin2 0.5s infinite linear; /* Animação de abrir a boca */
 }
 
 .feed {
-  margin-top: -185px;
-  margin-left: 15px;
-  width: 45px;
-  height: 45px;
-  border-radius: 30%;
-  -moz-animation: eat 1s linear 0s infinite;
-  -webkit-animation: eat 1s linear 0s infinite;
-  animation: eat 1s linear 0s infinite;
+  margin-top: -185px; /* Sobe o elemento */
+  margin-left: 15px; /* Move para a direita */
+  width: 45px; /* Largura */
+  height: 45px; /* Altura */
+  border-radius: 30%; /* Bordas arredondadas */
+  -moz-animation: eat 1s linear 0s infinite; /* Animação no Firefox */
+  -webkit-animation: eat 1s linear 0s infinite; /* Animação no Chrome/Safari */
+  animation: eat 1s linear 0s infinite; /* Animação padrão */
 }
 
 /* Animation*/
 
 @keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-35deg);
-  }
-
+  0% { transform: rotate(0deg); } /* Início sem rotação */
+  50% { transform: rotate(-35deg); } /* Boca abre para cima */
 }
 
 @keyframes spin2 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(35deg);
-  }
+  0% { transform: rotate(0deg); } /* Início sem rotação */
+  50% { transform: rotate(35deg); } /* Boca abre para baixo */
 }
 
 @-moz-keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-35deg);
-  }
-
+  0% { transform: rotate(0deg); } /* Firefox: início sem rotação */
+  50% { transform: rotate(-35deg); } /* Boca abre para cima */
 }
 
 @-moz-keyframes spin2 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(35deg);
-  }
+  0% { transform: rotate(0deg); } /* Firefox: início sem rotação */
+  50% { transform: rotate(35deg); } /* Boca abre para baixo */
 }
 
 @-webkit-keyframes spin1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(-35deg);
-  }
-
+  0% { transform: rotate(0deg); } /* Chrome/Safari: início sem rotação */
+  50% { transform: rotate(-35deg); } /* Boca abre para cima */
 }
 
 @-webkit-keyframes spin2 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(35deg);
-  }
+  0% { transform: rotate(0deg); } /* Chrome/Safari: início sem rotação */
+  50% { transform: rotate(35deg); } /* Boca abre para baixo */
 }
 
 @keyframes eat {
   0% {
     box-shadow:
-      100px 65px 0 0 white,
+      100px 65px 0 0 white, /* Bolinhas do pacman */
       300px 65px 0 0 white,
       500px 65px 0 0 white,
       700px 65px 0 0 white,
@@ -380,10 +298,9 @@ div.pacman {
       1100px 65px 0 0 white,
       1300px 65px 0 0 white;
   }
-
   100% {
     box-shadow:
-      0px 65px 0 0 white,
+      0px 65px 0 0 white, /* Move as bolinhas */
       100px 65px 0 0 white,
       300px 65px 0 0 white,
       500px 65px 0 0 white,
@@ -392,13 +309,11 @@ div.pacman {
       1100px 65px 0 0 white;
   }
 }
-
-
 
 @-moz-keyframes eat {
   0% {
     box-shadow:
-      100px 65px 0 0 white,
+      100px 65px 0 0 white, /* Firefox: bolinhas do pacman */
       300px 65px 0 0 white,
       500px 65px 0 0 white,
       700px 65px 0 0 white,
@@ -406,10 +321,9 @@ div.pacman {
       1100px 65px 0 0 white,
       1300px 65px 0 0 white;
   }
-
   100% {
     box-shadow:
-      0px 65px 0 0 white,
+      0px 65px 0 0 white, /* Move as bolinhas */
       100px 65px 0 0 white,
       300px 65px 0 0 white,
       500px 65px 0 0 white,
@@ -418,12 +332,11 @@ div.pacman {
       1100px 65px 0 0 white;
   }
 }
-
 
 @-webkit-keyframes eat {
   0% {
     box-shadow:
-      100px 65px 0 0 white,
+      100px 65px 0 0 white, /* Chrome/Safari: bolinhas do pacman */
       300px 65px 0 0 white,
       500px 65px 0 0 white,
       700px 65px 0 0 white,
@@ -431,10 +344,9 @@ div.pacman {
       1100px 65px 0 0 white,
       1300px 65px 0 0 white;
   }
-
   100% {
     box-shadow:
-      0px 65px 0 0 white,
+      0px 65px 0 0 white, /* Move as bolinhas */
       100px 65px 0 0 white,
       300px 65px 0 0 white,
       500px 65px 0 0 white,
@@ -443,3 +355,5 @@ div.pacman {
       1100px 65px 0 0 white;
   }
 }
+
+
