@@ -9,7 +9,7 @@ const botao = document.getElementById("pronto")
 const senha = document.getElementById("senhaCadastro")
 const conSenha = document.getElementById("confirmar")
 const campos = document.querySelectorAll('.botao-campo input')
-
+const nome = document.getElementById("nomeCadastro")
 
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{8}$/;
@@ -24,6 +24,11 @@ form.addEventListener("submit", (evento) => {
     checkUsuario()
     checkSenha()
     compaSenha()
+    checkNome()
+
+
+
+
 });
 
 
@@ -34,6 +39,13 @@ form.addEventListener("submit", (evento) => {
 
 
 //Validação
+function checkNome (){
+    const nomeValue = nome.value
+    if(!nomePadrao == nome.value){
+        entradaErro(nome, "Nome inválido")
+    }
+}
+
 function checkEmail(){
     const emailValue = email.value
     if (!emailPadrao.test(emailValue)){
@@ -61,7 +73,7 @@ function checkSenha(){
 function compaSenha(){
     const conSenhaValue = conSenha.value
     const senhaValue = senha.value
-    if (senhaValue != conSenhaValue){
+    if (senhaValue != conSenhaValue || conSenhaValue ===""){
         entradaErro(conSenha, "As senhas devem ser iguais")
     }
 }
@@ -82,6 +94,8 @@ function entradaErro(entrada, mensagem){
 
     mensagemTexto.innerText = mensagem    
     formItem.className = "botao-campo error"
+    //Rola até o erro
+     entrada.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 
