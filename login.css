@@ -1,43 +1,194 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* Importa fonte do Google Fonts */
 
-*{
-    margin:0;
-    padding:0;
-   
+
+* {
+    padding: 0;
+    /* Remove o espaçamento interno padrão */
+    margin: 0;
+    /* Remove o espaçamento externo padrão */
+    box-sizing: border-box;
+    /* Inclui padding e border no tamanho total */
+    font-family: 'Press Start 2P', monospace;
+    /* Define fonte padrão */
+    font-weight: 500;
+    width: auto;
+    /* Define peso da fonte */
 }
 
 
 
-body{
+body  { 
     background-image: url(imgs/cad.labirinto.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column
+    font-family: 'Press Start 2P', monospace;
+    height: 150vh;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;  
 }
 
-form{
+
+
+header {
+    position: sticky;
+    /* Fixa o header no topo ao rolar */
+    top: 0;
+    /* Alinha ao topo */
+    left: 0;
+    /* Alinha à esquerda */
+    width: 100%;
+    /* Largura total */
+    border-bottom: solid #e5e900;
+    /* Borda inferior amarela */
+        animation: pisca-border 1s infinite;
+    /* Animação de piscar a borda */
+}
+
+@keyframes pisca-border {
+     0% { border-color: #FF0000; }
+    25% { border-color:#FFB8FF; }
+    50% { border-color: #00FFFF; }
+    75% { border-color:  #FFB852; }
+    100% { border-color: #FF0000; }
+}
+
+header h1 {
+    font-family: 'Press Start 2P', monospace;
+    /* Fonte do título */
+    font-size: 25px;
+    /* Tamanho da fonte */
+    padding: 5%;
+    /* Espaçamento interno */
+    color: #f2ff03;
+    /* Cor do texto */
+}
+
+header.nerdbar {
+    display: flex;
+    /* Layout flexível */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 15px;
+    /* Espaço entre itens */
+    padding: 1%;
+    /* Espaçamento interno */
+    background-color: #302f2f;
+    /* Cor de fundo */
+    flex-direction: row;
+    /* Direção horizontal */
+    justify-content: space-between;
+    /* Espaço entre itens */
+    height: 130px;
+    /* Altura do header */
+    position: sticky;
+    /* Fixa ao rolar */
+    z-index: 100;
+    /* Sobrepõe outros elementos */
+
+}
+
+div.logo img {
+    height: 150px;
+    /* Altura da logo */
+    padding: 3%;
+    /* Espaçamento interno */
+}
+
+div.logo img:hover {
+    transform: rotate(720deg);
+    /* Gira a logo ao passar o mouse */
+    transition: transform 1s ease;
+    /* Animação suave */
+}
+
+div.logo {
+    display: flex;
+    /* Layout flexível */
+    flex-direction: row;
+    /* Direção horizontal */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    font-style: italic;
+    /* Itálico */
+    justify-content: space-around;
+    /* Espaço ao redor dos itens */
+}
+
+div.navbar {
+    display: flex;
+    /* Layout flexível */
+    justify-content: space-around;
+    padding: 1%;
+    /* Espaço ao redor dos links */
+    font-size: 1px;
+    /* Tamanho da fonte */
+    gap: 2%;
+    /* Espaço entre links */
+}
+
+div.navbar a {
+    text-decoration: none;
+    /* Remove sublinhado */
+    text-transform: uppercase;
+    /* Letras maiúsculas */
+    color: #e5e900;
+    /* Cor do texto */
+    font-size: 12px;
+   
+    transition: color 0.3s ease;
+    /* Animação suave ao passar o mouse */
+
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    font-size: 10px;
+    
+}
+
+nav a:hover {
+    cursor: pointer;
+    animation: pisca-cor 1s infinite;
+}
+
+@keyframes pisca-cor {
+    0% { color: #FF0000; }
+    25% { color:#FFB8FF; }
+    50% { color: #00FFFF; }
+    75% { color:  #FFB852; }
+    100% { color: #FF0000; }
+}
+h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 15px;
+    color: #f2ff03;
+}
+
+
+
+
+form {
 
     display: flex;
     padding: 2%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
- 
-    
+
+
 }
 
-section h1{
-    font-family: 'Press Start 2P', monospace;
-    margin: 2%;
-    color: #f2ff03;
-}
 
-section{
-    margin-top: 5%;
-    background-color:rgb(6, 11, 108);
+section {
+    width: 50%;
+    height: 80%;    
+    margin-top: 1%;
+    background-color: rgb(6, 11, 108);
     border-radius: 12px;
     padding: 2%;
     box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
@@ -48,29 +199,116 @@ section{
     justify-content: center;
     justify-items: center;
 }
-
-section img{
-    width: 65%;
+section h1 {
+    font-family: 'Press Start 2P', monospace;
+    margin-bottom: 12%;
+    font-size: 25px;
+    color: #f2ff03;
 }
 
-input{
+
+section img {
+    width: 55%;
+}
+
+input {
     width: 100%;
-    
+    padding: 20px;
+    margin: 10px 0;
     margin-top: 15px;
-    border: 3px solid #f2ff03;  
+    border: 3px solid #f2ff03;
     border-radius: 6px;
-    font-size: 14px; 
+    font-size: 14px;
     background-color: rgb(7, 24, 99);
-    display: flex;
+    color: aliceblue;
 }
 
-div.container{
+input:hover{
+    cursor: pointer;
+    
+}
+
+div.container {
     display: flex;
     flex-direction: row;
     padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-input::placeholder{
-    color: rgb(146, 141, 141);
+input::placeholder {
+    color: #e5e900;
     opacity: 10px;
+}
+
+input:focus {  
+    outline: none;
+    border-color: #f2ff03;
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
+}
+
+input:focus::placeholder {
+    color: #f2ff03;
+    font-size: 12px;
+    transform: translateY(-15px) ;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+
+button {
+    width: 100px;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f2ff03;
+    color: rgb(7, 24, 99);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #90970a;
+    cursor: pointer;
+}
+
+  
+
+#botao-funcao {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f2ff03;
+    color: rgb(7, 24, 99);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#enviar:hover {
+    background-color: #90970a;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#cadastro-link {
+    text-decoration: none;
+    color: #f2ff03;
+    font-size: 14px;
+    margin-top: 10px;
+    animation: pisca-cor 1s infinite;
+    transition: color 0.3s ease;
+    cursor: default;
+}
+
+#cadastro-link a{
+    color:#e5e900;
 }

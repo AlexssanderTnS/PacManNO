@@ -29,8 +29,19 @@ header {
     left: 0;
     width: 100%;
     border-bottom: solid #e5e900;
+    animation: pisca-border 1s infinite;
 
 }
+
+
+@keyframes pisca-border {
+     0% { border-color: #FF0000; }
+    25% { border-color:#FFB8FF; }
+    50% { border-color: #00FFFF; }
+    75% { border-color:  #FFB852; }
+    100% { border-color: #FF0000; }
+}
+
 
 header.nerdbar {
     display: flex;
@@ -90,13 +101,20 @@ nav {
 }
 
 nav a:hover {
-    color: #f400fc;
     cursor: pointer;
+    animation: pisca-cor 1s infinite;
+}
+
+@keyframes pisca-cor {
+    0% { color: #FF0000; }
+    25% { color:#FFB8FF; }
+    50% { color: #00FFFF; }
+    75% { color:  #FFB852; }
+    100% { color: #FF0000; }
 }
 
 
 
-/*h1*/
 h1 {
     font-family: 'Press Start 2P', monospace;
     font-size: 25px;
