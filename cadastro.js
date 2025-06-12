@@ -61,7 +61,7 @@ function checkUsuario(){
     if (!usuarioPadrao.test(usuarioValue)){
         entradaErro(usuario,"Usuário inválido")
     }
-    
+
 }
 function checkSenha(){
     const senhaValue = senha.value
@@ -120,3 +120,46 @@ campos.forEach (campo => {
         limparErro(campo)
     })
 })
+function buscarCEP() {
+    const cep = document.getElementById("cep").value;
+    const resultado = document.getElementById("resultado");
+
+    if (!cep || cep.length !== 8 || isNaN(cep)) {
+        resultado.innerHTML = "CEP inválido!";
+        return;
+    }
+
+    fetch('https://viacep.com.br/ws/${cep}/json/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.erro) {
+                resultado.innerHTML = "CEP não encontrado!";
+                return;
+            }
+
+            else {
+
+                document.getElementById("cidade").value = data.localidade;
+                document.getElementById("bairro").value = data.bairro;
+                document.getElementById("rua").value = data.logradouro;
+                // complemento é opcional, as vezes vem vazio
+                document.getElementById("complemento").value = data.complemento || "";
+            }
+
+        })
+        .catch(() => {
+            resultado.innerHTML = "Erro ao buscar o CEP!";
+        });
+}
+
+
+
+
+
+
+
+
+
+
+
+
