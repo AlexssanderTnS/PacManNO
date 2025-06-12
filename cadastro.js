@@ -10,6 +10,7 @@ const senha = document.getElementById("senhaCadastro")
 const conSenha = document.getElementById("confirmar")
 const campos = document.querySelectorAll('.botao-campo input')
 const nome = document.getElementById("nomeCadastro")
+const genero = document.getElementById("generos")
 
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{8}$/;
@@ -25,7 +26,7 @@ form.addEventListener("submit", (evento) => {
     checkSenha()
     compaSenha()
     checkNome()
-
+    checkGenero()
 
 
 
@@ -41,7 +42,7 @@ form.addEventListener("submit", (evento) => {
 //Validação
 function checkNome (){
     const nomeValue = nome.value
-    if(!nomePadrao == nome.value){
+    if(!nomePadrao == nomeValue){
         entradaErro(nome, "Nome inválido")
     }
 }
@@ -75,6 +76,12 @@ function compaSenha(){
     const senhaValue = senha.value
     if (senhaValue != conSenhaValue || conSenhaValue ===""){
         entradaErro(conSenha, "As senhas devem ser iguais")
+    }
+}
+function checkGenero(){
+    const generoValue = genero.value
+    if(generoValue ==""){
+        entradaErro(genero, "Por favor, selecione seu gênero.")
     }
 }
 

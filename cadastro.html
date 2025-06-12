@@ -76,13 +76,14 @@
       <p>erro</p>
     </div>
     <!--Selecionar o gênero-->
-    <div class="botao-container" id="botao-container">
+    <div class="botao-campo" id="botao-container">
       <select select name="generos" id="generos">
-        <option option value="feminino">Selecione o seu gênero</option>
+        <option value="">Selecione o seu gênero</option>
         <option value="feminino">Feminino</option>
         <option value="masculino">Masculino</option>
         <option value="outro/prefironaodizer">Outro/ Prefiro não dizer</option>
       </select>
+      <p>erro</p>
     </div>
 
     <!--Continuação dos inputs-->
@@ -132,6 +133,15 @@
     // Aplica a máscara quando o DOM estiver pronto
     $(document).ready(function () {
       $('#cpf').mask('000.000.000-00');
+    });
+    $(document).ready(function () {
+      $('#celular').mask('+55 (00) 00000-0000');
+    });
+    $(document).ready(function () {
+      $('#fixo').mask('+55 (00) 0000-0000');
+    });
+    $(document).ready(function () {
+      $('#cep').mask('00000-000');
     });
   </script>
   <!--linkando o js ao html-->
