@@ -28,6 +28,15 @@ header {
     left: 0;
     width: 100%;
     border-bottom: solid #FCBD00;
+    animation: pisca-border 1s infinite;
+}
+
+@keyframes pisca-border {
+    0% { border-color: #FF0000; }
+    25% { border-color: #FFB8FF; }
+    50% { border-color: #00FFFF; }
+    75% { border-color: #FFB852; }
+    100% { border-color: #FF0000; }
 }
 
 header.nerdbar {

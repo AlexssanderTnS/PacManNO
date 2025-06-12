@@ -28,7 +28,18 @@ header {
   left: 0; /* Alinha à esquerda */
   width: 100%; /* Largura total */
   border-bottom: solid #e5e900; /* Borda inferior amarela */
+  animation: pisca-border 1s infinite; /* Animação de piscar a borda */
 }
+
+
+@keyframes pisca-border {
+     0% { border-color: #FF0000; }
+    25% { border-color:#FFB8FF; }
+    50% { border-color: #00FFFF; }
+    75% { border-color:  #FFB852; }
+    100% { border-color: #FF0000; }
+}
+
 
 header.nerdbar {
   display: flex; /* Layout flexível */
@@ -75,7 +86,9 @@ div.navbar a {
   text-decoration: none; /* Remove sublinhado */
   text-transform: uppercase; /* Letras maiúsculas */
   color: #e5e900; /* Cor do texto */
+  transition: color 0.3s ease;
 }
+
 
 nav {
   display: flex; /* Layout flexível */
@@ -84,9 +97,20 @@ nav {
 }
 
 nav a:hover {
-  color: #f400fc; /* Cor ao passar o mouse */
-  cursor: pointer; /* Cursor de ponteiro */
+    cursor: pointer;
+    animation: pisca-cor 1s infinite;
 }
+
+@keyframes pisca-cor {
+    0% { color: #FF0000; }
+    25% { color:#FFB8FF; }
+    50% { color: #00FFFF; }
+    75% { color:  #FFB852; }
+    100% { color: #FF0000; }
+}
+
+
+
 
 div.Banner-Principal {
   display: flex; /* Layout flexível */
@@ -150,7 +174,9 @@ div.card {
   justify-content: center; /* Centraliza verticalmente */
   width: 260px; /* Largura do card */
   height: 320px; /* Altura do card */
-  background-color: rgba(0, 0, 0, 0.308); /* Fundo semitransparente */
+  background-image: url(/imgs/cad.labirinto.png);
+  background-size: cover; /* Cobre o espaço com a imagem */
+  background-position: center; /* Centraliza a imagem */  
   border-radius: 20px; /* Bordas arredondadas */
   box-shadow: 0px 0px 20px #000; /* Sombra */
   margin: 20px; /* Espaçamento externo */
@@ -160,16 +186,25 @@ div.card {
 
 div.card a {
   text-decoration: none; /* Remove sublinhado */
-  color: #FCBD00; /* Cor do link */
+  color: #00FFFF; /* Cor do link */
   font-size: 25px; /* Tamanho da fonte */
   text-align: center; /* Centraliza texto */
   font-weight: bold; /* Negrito */
   text-transform: uppercase; /* Letras maiúsculas */
   margin-top: 10px; /* Espaço acima */
+  /* animation: pisca-cor 1s infinite; Animação de piscar a cor */
+
 }
 div.card a:hover {
-  color: #f506fdf5; /* Cor ao passar o mouse */
+  animation: pisca-cor 1s infinite; /* Animação de piscar a cor */
   
+}
+@keyframes pisca-cor {
+  0% { color: #FF0000; }
+  25% { color: #FFB8FF; }
+  50% { color: #00FFFF; }
+  75% { color: #FFB852; }
+  100% { color: #FF0000; }
 }
 
 @keyframes link-bounce {
@@ -220,15 +255,17 @@ div.Btop p{
   top: 238px; /* Move para baixo */
 }
 
-#fala {
-  width: 20%; /* Largura do elemento */
-  position: relative; /* Posição relativa */
-  left: 77px; /* Move para a direita */
+
+#fala{
+  width: 14%;
+  position:absolute; /* Posição relativa */
+  top: 90%;
+  left: 35%;
 }
 
-.old {
-  position: relative; /* Posição relativa */
-  top: 178px; /* Move para baixo */
+#copy{
+  padding: 5%;
+ margin-left: 30%;
 }
 
 div.pacman {
