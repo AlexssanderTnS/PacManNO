@@ -40,17 +40,10 @@ header {
     /* Largura total */
     border-bottom: solid #e5e900;
     /* Borda inferior amarela */
-        animation: pisca-border 1s infinite;
-    /* Animação de piscar a borda */
 }
 
-@keyframes pisca-border {
-     0% { border-color: #FF0000; }
-    25% { border-color:#FFB8FF; }
-    50% { border-color: #00FFFF; }
-    75% { border-color:  #FFB852; }
-    100% { border-color: #FF0000; }
-}
+
+
 
 header h1 {
     font-family: 'Press Start 2P', monospace;
