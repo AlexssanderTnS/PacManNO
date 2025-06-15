@@ -231,18 +231,18 @@ option {
 }
 
 .form button:hover {
-    background-color: red;
+    background-color: #FF0000(255, 1, 1);
 }
 
 /*Mensagem de erro*/
 .botao-campo p {
-    color: red;
+    color: #FF0000;
     font-size: 1em;
     visibility: hidden;
 }
 
 .botao-campo.error input {
-    border-color: red;
+    border-color: #FF0000;
 
 }
 

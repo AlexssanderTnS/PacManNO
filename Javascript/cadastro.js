@@ -1,20 +1,20 @@
-const usuarioCadastrado = {
-    email: "email@exemplo.com",
-    senha: "senhaa",
-};
+
+//dados
 const email = document.getElementById("emailCadastro")
 const usuario = document.getElementById("usuarioCadastro")
-const form = document.getElementById("form")
-const botao = document.getElementById("pronto")
+const genero = document.getElementById("generos")
 const senha = document.getElementById("senhaCadastro")
 const conSenha = document.getElementById("confirmar")
-const campos = document.querySelectorAll('.botao-campo input')
 const nome = document.getElementById("nomeCadastro")
-const genero = document.getElementById("generos")
+
+//Botões
+const campos = document.querySelectorAll('.botao-campo input')
+const botao = document.getElementById("pronto")
+const form = document.getElementById("form")
 
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{8}$/;
-const nomePadrao = /^[a-z A-Z]{6,80}]$/
+const nomePadrao = /^[a-z A-Z]{6,80}$/
 const usuarioPadrao = /^[a-z A-Z]{6}/
 
 
@@ -27,8 +27,12 @@ form.addEventListener("submit", (evento) => {
     compaSenha()
     checkNome()
     checkGenero()
-
-
+   
+    const erros = document.querySelectorAll('.botao-campo.error')
+    if (erros.length ===0){
+        armazenamentoDeDados()
+        form.reset()
+    }
 
 });
 
@@ -42,7 +46,7 @@ form.addEventListener("submit", (evento) => {
 //Validação
 function checkNome (){
     const nomeValue = nome.value
-    if(!nomePadrao == nomeValue){
+    if(!nomePadrao.test(nomeValue)){
         entradaErro(nome, "Nome inválido")
     }
 }
@@ -82,8 +86,15 @@ function checkGenero(){
     const generoValue = genero.value
     if(generoValue ==""){
         entradaErro(genero, "Por favor, selecione seu gênero.")
+        genero.style.backgroundColor= "#FF0000"
     }
-}
+}  // Fecha a função aqui!
+
+// Agora adiciona o event listener fora da função
+genero.addEventListener("change", () => {
+    limparErro(genero);
+    genero.style.backgroundColor = "#ffff00"; 
+});
 
 // Limpar senha
 function limparSenha() {
@@ -129,7 +140,7 @@ function buscarCEP() {
         return;
     }
 
-    fetch('https://viacep.com.br/ws/${cep}/json/')
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(response => response.json())
         .then(data => {
             if (data.erro) {
@@ -149,11 +160,22 @@ function buscarCEP() {
         })
         .catch(() => {
             resultado.innerHTML = "Erro ao buscar o CEP!";
+            
         });
 }
 
 
+//Local Storage
+    function armazenamentoDeDados(){
+        const dadosUsuario = {
+            nome: nome.value,
+            usuario: usuario.value,
+            senha: senha.value,
+            genero: genero.value,
 
+        }
+        localStorage.setItem("usuariosCadastrados", JSON.stringify(dadosUsuario))
+    }
 
 
 
