@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+
+
+  <header class="nerdbar">
+
+    <div class="logo">
+      <img src="/imgs/logoroxa.png" alt="logo">
+      <h1>NerdCore</h1>
+    </div>
+
+    <div class="navbar">
+
+      <nav class="link">
+        <a href="/index.html">Inicio</a>
+        <a href="#">Carrinho</a>
+        <a target="_blank" href="/cadastro.html">Cadastre-se</a>
+        <a target="_blank" href="/login.html">Login</a>
+        <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <!-- Script de acessibilidade Elfsight -->
+  <div class="elfsight-app-47963e1a-79b6-4ecf-ac6d-35be428b39f3" data-elfsight-app-lazy></div> <!-- Widget Elfsight -->
+
+
+
+  <!--inputs iniciais-->
+
+  <form class="parte1" id="form">
+    <h1>Cadastre-se no estilo!</h1>
+
+    <div class="botao-campo">
+      <input type="text" id="nomeCadastro" placeholder="Digite o seu nome completo">
+      <p>erro</p>
+    </div>
+
+    <div class="botao-campo">
+      <input type="text" id="usuarioCadastro" placeholder="Digite o seu nome de usuário">
+      <p>erro</p>
+    </div>
+
+    <div class="botao-campo">
+      <input type="email" id="emailCadastro" placeholder="E-mail">
+      <p>erro</p>
+    </div>
+
+    <div class="botao-campo">
+      <input type="password" id="senhaCadastro" placeholder="Senha">
+      <p>erro</p>
+    </div>
+    <div class="botao-campo">
+      <input type="password" id="confirmar" name="confirmar" placeholder="Confirme a sua senha">
+      <p>erro</p>
+    </div>
+    <div class="botao-campo">
+      <input type="date" id="date" name="date">
+      <p>erro</p>
+    </div>
+    <!--Selecionar o gênero-->
+    <div class="botao-campo" id="botao-container">
+      <select select name="generos" id="generos">
+        <option value="">Selecione o seu gênero</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro/prefironaodizer">Outro/ Prefiro não dizer</option>
+      </select>
+      <p>erro</p>
+    </div>
+
+    <!--Continuação dos inputs-->
+
+    <input type="text" name="mae" id="mae" placeholder="Digite o nome da sua mãe">
+
+    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder=" Digite o seu cpf  (000.000.000-00)">
+
+    <input type="tel" name="celular" id="celular" placeholder="Digite o seu número (XX) XXXXX-XXXX">
+
+    <input type="tel" name="fixo" id="fixo" placeholder="Digite o seu número fixo (DDD)">
+
+    <input type="text" name="cep" id="cep" placeholder="Cep: 00000-000">
+
+    <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+
+    <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+
+    <input type="text" name="numero" id="numero" placeholder="N°">
+
+    <input type="text" name="rua" id="rua" placeholder="Endereço">
+
+    <input type="text" name="complemento" id="complemento" placeholder="complemento">
+
+    <button type="submit" id="pronto">Pronto!!</button>
+
+    <button id="limpar">Limpar tudo</button>
+  </form>
+
+
+
+
+
+
+  <!-- INTÉRPRETE DE LIBRAS -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script>
+    // Aplica a máscara quando o DOM estiver pronto
+    $(document).ready(function () {
+      $('#cpf').mask('000.000.000-00');
+    });
+    $(document).ready(function () {
+      $('#celular').mask('+55 (00) 00000-0000');
+    });
+    $(document).ready(function () {
+      $('#fixo').mask('+55 (00) 0000-0000');
+    });
+    $(document).ready(function () {
+      $('#cep').mask('00000-000');
+    });
+  </script>
+  <!--linkando o js ao html-->
+  <script src="cadastro.js"></script>
+</body>
+
+</html>
