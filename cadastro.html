@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
   <title>Cadastro</title>
-  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="/cadastro.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
       <nav class="link">
         <a href="/index.html">Inicio</a>
         <a href="#">Carrinho</a>
-        <a target="_blank" href="/cadastro.html">Cadastre-se</a>
-        <a target="_blank" href="/login.html">Login</a>
+        <a target="_blank" href="cadastro.html">Cadastre-se</a>
+        <a target="_blank" href="login.html">Login</a>
         <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a>
 
       </nav>
@@ -87,14 +87,24 @@
     </div>
 
     <!--Continuação dos inputs-->
-
+    <div class="botao-campo">
     <input type="text" name="mae" id="mae" placeholder="Digite o nome da sua mãe">
+    <p>erro</p>
+  </div>
+    <div class="botao-campo">
+      <input type="text" id="cpf" name="cpf" maxlength="14" placeholder=" Digite o seu cpf  (000.000.000-00)">
+      <p>erro</p>
+    </div>
+    
+    <div class="botao-campo">
+      <input type="tel" name="celular" id="celular" placeholder="Digite o seu número (XX) XXXXX-XXXX">
+      <p>erro</p>
+    </div>
 
-    <input type="text" id="cpf" name="cpf" maxlength="14" placeholder=" Digite o seu cpf  (000.000.000-00)">
-
-    <input type="tel" name="celular" id="celular" placeholder="Digite o seu número (XX) XXXXX-XXXX">
-
-    <input type="tel" name="fixo" id="fixo" placeholder="Digite o seu número fixo (DDD)">
+    <div class="botao-campo">
+      <input type="tel" name="fixo" id="fixo" placeholder="Digite o seu número fixo (DDD)">
+      <p>erro</p>
+    </div>
 
     <input type="text" name="cep" id="cep" placeholder="Cep: 00000-000">
 
@@ -141,11 +151,11 @@
       $('#fixo').mask('+55 (00) 0000-0000');
     });
     $(document).ready(function () {
-      $('#cep').mask('00000-000');
-    });
+        $('#cep').mask('00000-000');
+     });
   </script>
   <!--linkando o js ao html-->
-  <script src="cadastro.js"></script>
+  <script src="/cadastro.js"></script>
 </body>
 
 </html>
