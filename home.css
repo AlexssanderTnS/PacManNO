@@ -12,6 +12,7 @@ html {
   scroll-behavior: smooth; /* Suaviza o scroll */
   overflow-x: hidden; /* Esconde rolagem horizontal */
   scroll-padding-top: 130px; /* Espaço para header fixo */
+  width: 100vw; 
   /* Isso garante que o conteúdo não fique escondido atrás do header fixo */
 }
 
@@ -28,17 +29,9 @@ header {
   left: 0; /* Alinha à esquerda */
   width: 100%; /* Largura total */
   border-bottom: solid #e5e900; /* Borda inferior amarela */
-  animation: pisca-border 1s infinite; /* Animação de piscar a borda */
+
 }
 
-
-@keyframes pisca-border {
-     0% { border-color: #FF0000; }
-    25% { border-color:#FFB8FF; }
-    50% { border-color: #00FFFF; }
-    75% { border-color:  #FFB852; }
-    100% { border-color: #FF0000; }
-}
 
 
 header.nerdbar {
@@ -402,4 +395,70 @@ div.pacman {
   }
 }
 
+@media (max-width: 768px) {
 
+  *{
+    font-size: 14px; /* Reduz tamanho da fonte */
+    width: 90%; /* Largura total */
+    margin: 0; /* Remove margem */
+    padding: 0; /* Remove padding */  
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    align-items: center;
+    overflow:visible; /* Permite rolagem vertical */
+  }
+  
+  body{
+    margin: 0;
+    height: 0;
+    width: 100%;
+  }
+
+  header{
+    width: 100vw; 
+    padding: 0; /* Remove padding */
+    height: 100px; /* Altura reduzida */
+    background-color: #302f2f; /* Cor de fundo */
+
+  }
+
+  header.nerdbar {
+    display: flex; /* Layout flexível */
+    position: sticky;
+    justify-content: left;
+    
+  }
+  
+
+  ul{
+    display: none;
+  }
+
+  div.logo img {
+    height: 100px; /* Reduz altura da logo */
+  }
+
+  div.navbar {
+    flex-direction: column; /* Muda direção para coluna */
+    gap: 10px; /* Espaço entre links reduzido */
+  }
+
+  div.Banner-Principal {
+    display: block;
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%; /* Largura total */
+    padding: 5%; /* Aumenta espaçamento interno */
+    top: -30px; /* Ajusta posição do banner */
+  }
+
+  div.enabled{
+    display: none;
+  }
+
+  div.card {
+    width: 90%; /* Largura total do card */
+    height: auto; /* Altura automática */
+  }
+
+ 
+ 
+}
