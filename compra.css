@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-    padding: 0;
+    padding: 1;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka One', sans-serif;
-    font-weight: 600;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 1px;
 }
 
 
@@ -18,8 +17,7 @@ html {
 body {
     background-image: url(/imgs/labirinto.jpg);
     width: 100%;
-    font-family: 'Fredoka One', sans-serif;
-    height: 400vh;
+    height: 100vh;
 }
 
 header {
@@ -27,17 +25,19 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: solid #FCBD00;
+    border-bottom: solid #c4c62a;
     animation: pisca-border 1s infinite;
 }
 
-@keyframes pisca-border {
-    0% { border-color: #FF0000; }
-    25% { border-color: #FFB8FF; }
-    50% { border-color: #00FFFF; }
-    75% { border-color: #FFB852; }
-    100% { border-color: #FF0000; }
+h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 25px;
+    padding: 5%;
+    color: #f2ff03;
+    cursor: default;
 }
+
+
 
 header.nerdbar {
     display: flex;
@@ -50,7 +50,6 @@ header.nerdbar {
     height: 130px;
     position: sticky;
     z-index: 100;
-
 }
 
 div.logo img {
@@ -58,18 +57,29 @@ div.logo img {
     padding: 3%;
 }
 
+div.minaazul img {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 320px;
+    background-image: url(/Mario/Base.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px #f8aa19;
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
 
 div.logo img:hover {
     transform: rotate(720deg);
     transition: transform 1s ease;
 
-}
-
-
-h1 {
-    color: #FCBD00;
-    font-style: italic;
-    font-size: 30px;
 }
 
 div.logo {
@@ -78,8 +88,8 @@ div.logo {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    font-style: italic;
     justify-content: space-around;
+    font-family: 'Press Start 2P', monospace;
 }
 
 div.navbar {
@@ -93,19 +103,65 @@ div.navbar {
 div.navbar a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #f506fdf5;
+    color: #e0e31d;
+    font-size: 10px;
 }
 
 nav {
     display: flex;
     gap: 25px;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 nav a:hover {
-    color: #FCBD00;
     cursor: pointer;
+    animation: pisca-cor 1s infinite;
 }
+
+@keyframes pisca-cor {
+    0% {
+        color: #FF0000;
+    }
+
+    25% {
+        color: #FFB8FF;
+    }
+
+    50% {
+        color: #00FFFF;
+    }
+
+    75% {
+        color: #FFB852;
+    }
+
+    100% {
+        color: #FF0000;
+    }
+}
+
+@keyframes pisca-border {
+    0% {
+        border-color: #FF0000;
+    }
+
+    25% {
+        border-color: #FFB8FF;
+    }
+
+    50% {
+        border-color: #00FFFF;
+    }
+
+    75% {
+        border-color: #FFB852;
+    }
+
+    100% {
+        border-color: #FF0000;
+    }
+}
+
 
 
 /*camisa*/
@@ -115,14 +171,16 @@ section {
     /* justify-content: space-evenly; */
     align-content: stretch;
     flex-direction: row;
+
 }
 
 
 div.minaazul img {
-    height: 700px;
-    width: 600px;
+    height: 800px;
+    width: 700px;
     display: flex;
-
+    top: 120px;
+    
 }
 
 
@@ -147,8 +205,10 @@ div.minaazul {
     box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
     /* margin-left: 55%; */
     position: relative;
-    top: 93px;
-    left: 30px;
+    top: 200px;
+    left: 190px;
+    margin-bottom: 126px;
+
 }
 
 
@@ -156,52 +216,55 @@ div.minaazul {
 /*preço*/
 
 .preco {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     color: #ffcc00;
     margin-bottom: 10px;
-
+    cursor: default;
+    margin-top: -20px;
 
 }
 
 /*Parcelamento*/
 
 .parcelamento {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     color: #afa40d;
     background-color: #111110;
     padding: 10px;
     border-radius: 15px;
-    margin-bottom: 15px;
-    cursor: unset;
+    margin-bottom: 20px;
+    cursor: default;
+    
 }
 
 /*Tamanho*/
 
 label {
-    font-size: 20px;
-    color: #fafafa;
+    font-size: 25px;
+    color: #f5f5f5;
     margin-right: 20px;
-
+    padding: 10;
 }
 
 /*caixa do tamanho*/
 
 select {
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgb(62, 11, 144);
+    box-shadow: 0 0 20px rgb(202, 177, 242);
     padding: 15px;
-    background-color: #cfc7ec;
+    background-color: #f3f3f3;
+
 }
 
 /*famoso salva vidas, não mexam nisso ou mato alguem hoje*/
 
 div.comp h1 {
-    font-size: 60px;
+    font-size: 20px;
     margin-left: 800px;
     margin-bottom: -80px;
 }
@@ -212,14 +275,17 @@ div.comp h1 {
 
 .caixa #nome-produto {
     font-size: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     color: #e9c80cf8;
+    cursor: default;
 }
 
 .caixa #descricao-produto {
-    font-size: 24px;
-    margin-bottom: 60px;
-    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 100px;
+    color: #e3e3e3;
+    margin-top: 10px;
+    cursor: default;
 
 }
 
@@ -228,6 +294,17 @@ div.comp h1 {
     height: 220px;
     margin-left: 5%;
     margin-bottom: 5%;
+    box-sizing: border-box;
+    border-color: #bd9d40;
 
+}
+
+div.caixa #botaocompra {
+    font-size: 30px;
+    padding: 17px;
+    border-radius: 40px;
+    margin: 120px;
+    margin-right: 20px;
+    display: inline;
 
 }
