@@ -39,6 +39,8 @@ form.addEventListener("submit", (evento) => {
     const erros = document.querySelectorAll('.botao-campo.error')
     if (erros.length === 0){
         armazenamentoDeDados()
+        alert("Usuário Cadastrado com sucesso")
+        window.location.href = "login.html"
         form.reset()
     }
 

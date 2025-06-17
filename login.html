@@ -2,85 +2,77 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
-    <script src="cadastro.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon" />
+    <script src="login.js" defer></script>
 
     <title>Login</title>
 </head>
 
 <body>
 
-    <header class="nerdbar"> <!-- Cabeçalho com barra de navegação -->
+    <header class="nerdbar">
 
-        <div class="logo"> <!-- Container do logo -->
-            <img src="/imgs/logoroxa.png" alt="logo"> <!-- Imagem do logo -->
-            <h1>NerdCore</h1> <!-- Título do site -->
-        </div> <!-- Fim do container do logo -->
+        <div class="logo">
+            <img src="/imgs/logoroxa.png" alt="logo" />
+            <h1>NerdCore</h1>
+        </div>
 
-        <div class="navbar"> <!-- Container da barra de navegação -->
+        <div class="navbar">
+            <nav class="link">
+                <a href="/index.html">Inicio</a>
+                <a href="#">Carrinho</a>
+                <a target="_blank" href="/cadastro.html">Cadastre-se</a>
+                <a target="_blank" href="/login.html">Login</a>
+                <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a>
+            </nav>
+        </div>
 
-            <nav class="link"> <!-- Navegação principal -->
-                <a href="/index.html">Inicio</a> <!-- Link para a página inicial -->
-                <a href="#">Carrinho</a> <!-- Link para o carrinho (sem destino definido) -->
-                <a target="_blank" href="/cadastro.html">Cadastre-se</a> <!-- Link para cadastro em nova aba -->
-                <a target="_blank" href="/login.html">Login</a> <!-- Link para login em nova aba -->
-                <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a> <!-- Link para jogo em nova aba -->
-            </nav> <!-- Fim da navegação principal -->
+    </header>
 
-        </div> <!-- Fim do container da barra de navegação -->
-    </header> <!-- Fim do cabeçalho -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-47963e1a-79b6-4ecf-ac6d-35be428b39f3" data-elfsight-app-lazy></div>
 
-
-
-
-     <script src="https://static.elfsight.com/platform/platform.js" async></script> <!-- Script de acessibilidade Elfsight -->
-    <div class="elfsight-app-47963e1a-79b6-4ecf-ac6d-35be428b39f3" data-elfsight-app-lazy></div> <!-- Widget Elfsight -->
-
-
-
-    
-    <div vw class="enabled"> <!-- Container do plugin VLibras -->
-        <div vw-access-button class="active"></div> <!-- Botão de acessibilidade VLibras -->
+    <div class="enabled">
+        <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div> <!-- Wrapper do plugin VLibras -->
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script> <!-- Script do plugin VLibras -->
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app'); // Inicializa o widget VLibras
-    </script>
 
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
     <section>
         <h1>Corre pra fazer seu Login!</h1>
-        <img src="imgs\pacmanonld.png" alt="">
-        <form id="formCadastro">
-            <!--Botão do usuário-->
-            <div class="container" id="id">
-                <input class="botao-campo" type="text" id="usuario" placeholder="Usuário">
+        <img src="imgs/pacmanonld.png" alt="Pacman" />
+        <form id="formLogin">
+            <!-- Campo do usuário -->
+            <div class="botao-campo">
+                <input type="text" id="usuario" placeholder="Usuário" />
                 <button type="button" id="botao-usuario" onclick="limparUsuario()">Limpar</button>
                 <p></p>
             </div>
-            <!--Botão da senha-->
-            <div class="container" id="container">
-                <input class="botao-campo" type="password" id="senha" placeholder="Senha">
+            <!-- Campo da senha -->
+            <div class="botao-campo">
+                <input type="password" id="senha" placeholder="Senha" />
                 <button type="button" id="botao-senha" onclick="limparSenha()">Limpar</button>
                 <p></p>
             </div>
-            <div class="enviar" id="enviar">
-                <!--Botão de enviar o login-->
+            <div class="enviar">
+                <!-- Botão de enviar o login -->
                 <button type="submit" class="botao-funcao" id="enviar">Enviar</button>
             </div>
-            <!--Botão que envia para a tela de cadastro-->
-        <div id="cadastro-link">
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
-        </div>
+            <!-- Link para cadastro -->
+            <div id="cadastro-link">
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
         </form>
     </section>
-
 
 </body>
 
