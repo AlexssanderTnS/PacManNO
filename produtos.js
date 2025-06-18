@@ -7,7 +7,7 @@ window.onload = async function () {
     const id = getIdDaURL();
 
     try {
-        const response = await fetch("/produtos.json");
+        const response = await fetch("produtos.json");
         const produtos = await response.json();
 
         const produto = produtos[id];
