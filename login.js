@@ -4,7 +4,7 @@ const senha = document.getElementById("senha");
 const dados = JSON.parse(localStorage.getItem("usuariosCadastrados"));
 
 const campos = document.querySelectorAll('#formLogin input');
-
+const limpar = document.getElementById("limpar")
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
     validarLogin();
@@ -49,3 +49,14 @@ campos.forEach (campo => {
         limparErro(campo)
     })
 })
+
+function limparCampo(){
+    form.reset()
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+limpar.addEventListener("click", evento => {
+    evento.preventDefault();
+    limparCampo();
+    
+});
