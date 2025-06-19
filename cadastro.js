@@ -11,15 +11,20 @@ const nascimento =  document.getElementById("date")
 const cel = document.getElementById("celular")
 const tel = document.getElementById("fixo")
 const mae = document.getElementById("mae")
+const cep = document.getElementById("cep");
 //Botões
 const campos = document.querySelectorAll('.botao-campo input')
 const botao = document.getElementById("pronto")
 const form = document.getElementById("form")
-
+//Padrões
 const emailPadrao = /^[\w]+(\.[\w]+)?@(gmail|hotmail|outlook|email)\.com$/;
 const senhaPadrao = /^[a-zA-Z]{8}$/;
 const nomePadrao = /^[a-z A-Z]{6,80}$/
 const usuarioPadrao = /^[a-z A-Z]{6}/
+const cepPadrao = /^[0-9]{8}$/
+//Endereço
+
+
 
 
 //Botão enviar
@@ -35,7 +40,7 @@ form.addEventListener("submit", (evento) => {
     checkCel()
     checkTel()
     checkMae()
-   
+    checkCEP()
     const erros = document.querySelectorAll('.botao-campo.error')
     if (erros.length === 0){
         armazenamentoDeDados()
@@ -46,7 +51,9 @@ form.addEventListener("submit", (evento) => {
 
 });
 
-
+cep.addEventListener('blur', (evento) =>{
+    buscaCep()
+})
 
 
 
@@ -124,6 +131,12 @@ function checkGenero(){
       entradaErro(tel, "Número errado")
   }
 }
+function checkCEP (){
+    const cepValor = cep.value
+    if (cepValor ===""){
+        entradaErro(cep, "CEP inválido")
+    }
+}
   
 
 //erro do gênero
@@ -168,38 +181,33 @@ campos.forEach (campo => {
         limparErro(campo)
     })
 })
-function buscarCEP() {
-    const cep = document.getElementById("cep").value;
-    const resultado = document.getElementById("resultado");
-
-    if (!cep || cep.length !== 8 || isNaN(cep)) {
-        resultado.innerHTML = "CEP inválido!";
+function buscaCep(){
+    const cepValue = document.getElementById("cep").value.replace(/\D/g, "")
+    let linkCep =  `https://viacep.com.br/ws/${cepValue}/json/`
+     if (cepValue.length !== 8) {
+        entradaErro(document.getElementById("cep"), "CEP deve ter 8 dígitos");
         return;
     }
+    fetch(linkCep)
+    .then(response => response.json())
+    .then(data => {
+        if (data.erro){
+            entradaErro(document.getElementById("cep"), "CEP não encontrado")
+        }
+        document.getElementById("rua").value = data.logradouro
+        document.getElementById("bairro").value = data.bairro
+        document.getElementById("cidade").value = data.localidade
+        document.getElementById("estado").value = data.uf
+    })
+    .catch(err =>{
+        entradaErro(document.getElementById("cep"), "erro ao buscar cep")
+        console.error(err)
+    })}
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.erro) {
-                resultado.innerHTML = "CEP não encontrado!";
-                return;
-            }
+    
+    
+ 
 
-            else {
-
-                document.getElementById("cidade").value = data.localidade;
-                document.getElementById("bairro").value = data.bairro;
-                document.getElementById("rua").value = data.logradouro;
-                // complemento é opcional, as vezes vem vazio
-                document.getElementById("complemento").value = data.complemento || "";
-            }
-
-        })
-        .catch(() => {
-            resultado.innerHTML = "Erro ao buscar o CEP!";
-            
-        });
-}
 
 
 //Local Storage
