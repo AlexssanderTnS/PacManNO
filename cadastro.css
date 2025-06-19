@@ -199,6 +199,7 @@ option {
 #pronto {
     background-color: yellow;
     color: black;
+    font-family: 'Press Start 2P',monospace;
     width: 35%;
     height: 50px;
     cursor: pointer;
@@ -222,6 +223,7 @@ option {
 #limpar {
     background-color: yellow;
     color: black;
+    font-family: 'Press Start 2P',monospace;
     width: 35%;
     height: 50px;
     cursor: pointer;
