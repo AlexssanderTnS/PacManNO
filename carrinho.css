@@ -18,11 +18,10 @@ body{
     align-items: center;
     margin-top: 255px;
     background-image: url(/imgs/labirinto.jpg);
+    
 }
 
 
 img{
-    width: 530px;
-    height: 500px;
-    
+    width: 630px;
 }
