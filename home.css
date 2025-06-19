@@ -94,6 +94,12 @@ nav a:hover {
     animation: pisca-cor 1s infinite;
 }
 
+h1 a{
+  text-decoration: none; /* Remove sublinhado */
+  color: #f2ff03; /* Cor do título */
+  transition: color
+}
+
 @keyframes pisca-cor {
     0% { color: #FF0000; }
     25% { color:#FFB8FF; }
