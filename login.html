@@ -24,9 +24,9 @@
             <nav class="link">
                 <a href="/index.html">Inicio</a>
                 <a href="#">Carrinho</a>
-                <a target="_blank" href="/cadastro.html">Cadastre-se</a>
-                <a target="_blank" href="/login.html">Login</a>
-                <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a>
+                <a href="/cadastro.html">Cadastre-se</a>
+                <a href="/login.html">Login</a>
+                <a href="/Jogo/pacman-master/index.html">Jogue</a>
             </nav>
         </div>
 
@@ -35,16 +35,15 @@
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-47963e1a-79b6-4ecf-ac6d-35be428b39f3" data-elfsight-app-lazy></div>
 
-    <div class="enabled">
-        <div vw-access-button class="active"></div>
+  <div vw class="enabled"> <!-- Container do plugin VLibras -->
+        <div vw-access-button class="active"></div> <!-- Botão de acessibilidade VLibras -->
         <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div> <!-- Wrapper do plugin VLibras -->
         </div>
     </div>
-
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script> <!-- Script do plugin VLibras -->
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app'); // Inicializa o widget VLibras
     </script>
 
     <section>
@@ -54,18 +53,18 @@
             <!-- Campo do usuário -->
             <div class="botao-campo">
                 <input type="text" id="usuario" placeholder="Usuário" />
-                <button type="button" id="botao-usuario" onclick="limparUsuario()">Limpar</button>
                 <p></p>
             </div>
             <!-- Campo da senha -->
             <div class="botao-campo">
                 <input type="password" id="senha" placeholder="Senha" />
-                <button type="button" id="botao-senha" onclick="limparSenha()">Limpar</button>
                 <p></p>
             </div>
             <div class="enviar">
                 <!-- Botão de enviar o login -->
                 <button type="submit" class="botao-funcao" id="enviar">Enviar</button>
+                <button id="limpar">Limpar</button>
+    
             </div>
             <!-- Link para cadastro -->
             <div id="cadastro-link">

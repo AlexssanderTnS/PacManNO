@@ -19,17 +19,20 @@
             <h1>NerdCore</h1> 
         </div> 
 
-        <div class="navbar"> 
-
+      <div class="navbar"> 
+       <span id="menu" class="material-symbols-outlined" onclick="clickMenu()"> 
+        Menu
+       </span> 
+        <ul id="lista-menu">
             <nav class="link"> 
                 <a href="/home.html">Inicio</a> 
                 <a href="#">Carrinho</a> 
                 <a target="_blank" href="/cadastro.html">Cadastre-se</a>
                 <a target="_blank" href="/login.html">Login</a> 
-                <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a> 
+                <a id="jogar" href="/Jogo/pacman-master/index.html">Jogue</a>
             </nav> 
-
-        </div> 
+        </ul>    
+      </div> 
     </header> 
 
 
@@ -43,21 +46,21 @@
       <img id="nome-produto" src="/CP/1 camisa chloe preta sem fundo.png" alt="Imagem do Produto">
       <!-- <img id="clue" src="/CB/2 camisa chloe branca sem fundo.png"> -->
     </div>
+  <ul id="lista">
+     <div class="caixa">
+       <h2 id="nome-produto">Nome do Produto</h2>
+       <p id="descricao-produto">Descrição aqui...</p>
+       <div class="preco" id="preco-produto">R$ --,--</div>
+       <div class="parcelamento">em 12x R$16,99 "Sem Juros"</div>
+       <label for="tamanho">Tamanho:</label>
+       <select id="tamanho" name="tamanho">
+         <option value="P">P</option>
+         <option value="M">M</option>
+         <option value="G">G</option>
+         <option value="GG">GG</option>
+       </select>
 
-    <div class="caixa">
-      <h2 id="nome-produto">Nome do Produto</h2>
-      <p id="descricao-produto">Descrição aqui...</p>
-      <div class="preco" id="preco-produto">R$ --,--</div>
-      <div class="parcelamento">em 12x R$16,99 "Sem Juros"</div>
-      <label for="tamanho">Tamanho:</label>
-      <select id="tamanho" name="tamanho">
-        <option value="P">P</option>
-        <option value="M">M</option>
-        <option value="G">G</option>
-        <option value="GG">GG</option>
-      </select>
-
-      <button id="botaocompra" href="">Comprar</button>
+       <button id="botaocompra" href="">Comprar</button>
     </div>
   </section>
 
