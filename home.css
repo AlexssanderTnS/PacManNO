@@ -89,6 +89,10 @@ nav {
   font-size: 10px; /* Tamanho da fonte */
 }
 
+#menu{
+  display: none; /* Esconde o menu por padrão */
+}
+
 nav a:hover {
     cursor: pointer;
     animation: pisca-cor 1s infinite;
@@ -401,41 +405,41 @@ div.pacman {
   }
 }
 
+
+
+
+
 @media (max-width: 768px) {
 
   *{
-    font-size: 14px; /* Reduz tamanho da fonte */
-    width: 90%; /* Largura total */
-    margin: 0; /* Remove margem */
-    padding: 0; /* Remove padding */  
-    box-sizing: border-box; /* Inclui padding e border no tamanho total */
-    align-items: center;
-    overflow:visible; /* Permite rolagem vertical */
-  }
-  
-  body{
     margin: 0;
-    height: 0;
-    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace; /* Fonte padrão */
+    font-weight: 500; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto */
   }
+
+  body{
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  
+  /* começem a copiar daqui   */
 
   header{
-    width: 100vw; 
-    padding: 0; /* Remove padding */
-    height: 100px; /* Altura reduzida */
-    background-color: #302f2f; /* Cor de fundo */
-
+    width: 100%; /* Largura total do header */
   }
 
   header.nerdbar {
-    display: flex; /* Layout flexível */
-    position: sticky;
-    justify-content: left;
-    
+    flex-direction: column; /* Muda direção para coluna */
+    align-items: center; /* Centraliza itens */
   }
-  
 
-  ul{
+  div.navbar ul {
     display: none;
   }
 
@@ -443,21 +447,92 @@ div.pacman {
     height: 100px; /* Reduz altura da logo */
   }
 
+  div.logo{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    justify-content: flex-end;
+
+  }
+
   div.navbar {
     flex-direction: column; /* Muda direção para coluna */
     gap: 10px; /* Espaço entre links reduzido */
   }
 
+  div.navbar a {
+    font-size: 14px; /* Reduz tamanho da fonte */
+    padding: 5px; /* Adiciona espaçamento interno */
+  }
+
+  #menu {
+    display: block; /* Exibe o menu */
+    color:#e5e900 ;
+    align-items: center;
+    position: relative;
+    top: -37px;
+  }
+
+  ul#menu-list{
+    display: flex; /* Exibe os links em linha */
+    flex-direction: column; /* Muda direção para coluna */
+    align-items: center; /* Centraliza links */
+    gap: 10px; /* Espaço entre links */
+  }
+
+  nav.link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;/* gap: 10px; */
+        width: 100%;
+        position: relative;
+        background-color: #302f2f;
+        top: -18%;
+  }
+
+  #jogar{
+    display: none;
+  }
+
+  /* Copiem até aqui */
+
+
+
+
+
+
   div.Banner-Principal {
-    display: block;
+
+    display: flex;
+    flex-direction: row;
     align-items: center; /* Centraliza horizontalmente */
     width: 100%; /* Largura total */
-    padding: 5%; /* Aumenta espaçamento interno */
+    padding: 10%; /* Aumenta espaçamento interno */
     top: -30px; /* Ajusta posição do banner */
+  }
+
+  #pacman {
+    width: 60%; /* Aumenta largura do pacman */
+    height: 60%; /* Aumenta altura do pacman */
+  }
+
+  #banner {
+    width: 60%; /* Aumenta largura do banner */
+    height: 60%; /* Aumenta altura do banner */
   }
 
   div.enabled{
     display: none;
+  }
+
+  main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   div.card {
@@ -465,6 +540,9 @@ div.pacman {
     height: auto; /* Altura automática */
   }
 
+  div.Btop{
+    display: none;
+  }
  
  
 }
