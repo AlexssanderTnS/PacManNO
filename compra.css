@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-    padding: 1;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Press Start 2P', monospace;
-    font-weight: 1px;
 }
 
 
@@ -17,7 +16,7 @@ html {
 body {
     background-image: url(/imgs/labirinto.jpg);
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -26,7 +25,10 @@ header {
     left: 0;
     width: 100%;
     border-bottom: solid #c4c62a;
-    animation: pisca-border 1s infinite;
+}
+
+header h1{
+    font-style: italic;
 }
 
 h1 {
@@ -37,6 +39,9 @@ h1 {
     cursor: default;
 }
 
+h2{
+    font-size: 9px;
+}
 
 
 header.nerdbar {
@@ -57,6 +62,8 @@ div.logo img {
     padding: 3%;
 }
 
+
+
 div.minaazul img {
     position: relative;
     z-index: 20;
@@ -64,13 +71,13 @@ div.minaazul img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 260px;
-    height: 320px;
-    background-image: url(/Mario/Base.png);
+    width: 160px;
+    height: 120px;
+    background-image: url(imgs/cad.labirinto.png);
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
-    box-shadow: 0px 2px 20px #f8aa19;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
     margin: 20px;
     padding: 10px;
     transition: transform 0.3s ease;
@@ -119,48 +126,13 @@ nav a:hover {
 }
 
 @keyframes pisca-cor {
-    0% {
-        color: #FF0000;
-    }
-
-    25% {
-        color: #FFB8FF;
-    }
-
-    50% {
-        color: #00FFFF;
-    }
-
-    75% {
-        color: #FFB852;
-    }
-
-    100% {
-        color: #FF0000;
-    }
+    0% {color: #FF0000;}
+    25% {color: #FFB8FF;}
+    50% {color: #00FFFF;}
+    75% {color: #FFB852;}
+    100% {color: #FF0000;}
 }
 
-@keyframes pisca-border {
-    0% {
-        border-color: #FF0000;
-    }
-
-    25% {
-        border-color: #FFB8FF;
-    }
-
-    50% {
-        border-color: #00FFFF;
-    }
-
-    75% {
-        border-color: #FFB852;
-    }
-
-    100% {
-        border-color: #FF0000;
-    }
-}
 
 
 
@@ -168,18 +140,19 @@ nav a:hover {
 
 section {
     display: flex;
-    /* justify-content: space-evenly; */
-    align-content: stretch;
+    justify-content: space-evenly;
+    align-content: center;
     flex-direction: row;
+    margin-bottom: 10%;
 
 }
 
 
 div.minaazul img {
-    height: 800px;
-    width: 700px;
+    height: 540px;
+    width: 490px;
     display: flex;
-    top: 120px;
+    top: 30px;
     
 }
 
@@ -187,56 +160,47 @@ div.minaazul img {
 /*div camisa*/
 
 div.minaazul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 12%;
+
     align-items: center;
 }
 
 
 /*caixa de compra*/
 
+
 .caixa {
     background-color: #0a0a2a;
-    padding: 100px;
+    padding: 2%;
     border-radius: 15px;
-    /* display: inline-block; */
+    height: 539px;
     box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
-    /* margin-left: 55%; */
     position: relative;
-    top: 200px;
-    left: 190px;
-    margin-bottom: 126px;
-
+    top: 51px;
+    width: 450px;
 }
-
-
 
 /*preço*/
 
 .preco {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: bolder;
     color: #ffcc00;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     cursor: default;
-    margin-top: -20px;
-
+    /* margin-top: -20px; */
 }
 
 /*Parcelamento*/
 
 .parcelamento {
-    font-size: 22px;
-    font-weight: bold;
-    color: #afa40d;
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: #e9c80c;
     background-color: #111110;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 20px;
     cursor: default;
-    
 }
 
 /*Tamanho*/
@@ -251,22 +215,12 @@ label {
 /*caixa do tamanho*/
 
 select {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgb(202, 177, 242);
-    padding: 15px;
-    background-color: #f3f3f3;
-
-}
-
-/*famoso salva vidas, não mexam nisso ou mato alguem hoje*/
-
-div.comp h1 {
-    font-size: 20px;
-    margin-left: 800px;
-    margin-bottom: -80px;
+    box-shadow: 0 0 10px rgb(202, 177, 242);
+    padding: 10px;
+    background-color: #e9c80cf8;
 }
 
 
@@ -274,37 +228,287 @@ div.comp h1 {
 
 
 .caixa #nome-produto {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 230%;
+    /* margin-bottom: 30px; */
     color: #e9c80cf8;
     cursor: default;
+
 }
 
 .caixa #descricao-produto {
-    font-size: 30px;
-    margin-bottom: 100px;
+   font-size: 144%;
+    margin-bottom: 57px;
     color: #e3e3e3;
-    margin-top: 10px;
+    margin-top: 18px;
     cursor: default;
-
-}
-
-.minaazul #clue {
-    width: 220px;
-    height: 220px;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    box-sizing: border-box;
-    border-color: #bd9d40;
-
 }
 
 div.caixa #botaocompra {
     font-size: 30px;
     padding: 17px;
     border-radius: 40px;
-    margin: 120px;
-    margin-right: 20px;
-    display: inline;
-
+    position: relative;
+    top: 40px;
+    left: 45px;
 }
+
+
+#botaocompra:hover{
+    cursor:pointer;
+    background-color: #e9c80cf8;
+    color: #f5f5f5;
+}
+
+@media screen and (max-width:879px) {
+    html {
+    scroll-behavior: smooth;
+   }
+
+
+ body {
+    background-image: url(/imgs/labirinto.jpg);
+    width: 100%;
+    height: 1%;
+ }
+
+ header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 200%;
+    border-bottom: solid #c4c62a;
+ }
+
+ header h1{
+    font-style: italic;
+ }
+
+ h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    padding: 5%;
+    color: #f2ff03;
+    cursor: default;
+ }
+
+ h2{
+    font-size: 20px;
+ }
+
+
+ header.nerdbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1%;
+    background-color: #302f2f;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 130px;
+    position: sticky;
+    z-index: 100;
+ }
+
+ div.logo img {
+    height: 150px;
+    padding: 3%;
+ }
+
+
+
+ div.minaazul img {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 120px;
+    background-image: url(imgs/cad.labirinto.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
+    margin: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+ }
+
+ div.logo img:hover {
+    transform: rotate(720deg);
+    transition: transform 1s ease;
+
+ }
+
+ div.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-around;
+    font-family: 'Press Start 2P', monospace;
+ }
+
+ div.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    font-size: 18px;
+    gap: 5%;
+ }
+
+ div.navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #e0e31d;
+    font-size: 10px;
+ }
+
+ nav {
+    display: flex;
+    gap: 25px;
+    font-size: 10px;
+ }
+
+ nav a:hover {
+    cursor: pointer;
+    animation: pisca-cor 1s infinite;
+ }
+
+ @keyframes pisca-cor {
+    0% {color: #FF0000;}
+    25% {color: #FFB8FF;}
+    50% {color: #00FFFF;}
+    75% {color: #FFB852;}
+    100% {color: #FF0000;}
+ }
+
+
+
+
+ /*camisa*/
+
+ section {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    margin-bottom: 10%;
+
+ }
+
+
+ div.minaazul img {
+    height: 540px;
+    width: 490px;
+    display: flex;
+    top: 30px;
+    
+ }
+
+
+ /*div camisa*/
+
+ div.minaazul {
+
+    align-items: center;
+ }
+
+
+ /*caixa de compra*/
+
+
+ .caixa {
+    background-color: #0a0a2a;
+    padding: 2%;
+    border-radius: 15px;
+    height: 539px;
+    box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
+    position: relative;
+    top: 51px;
+    width: 450px;
+ }
+
+ /*preço*/
+
+ .preco {
+    font-size: 38px;
+    font-weight: bolder;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    cursor: default;
+    /* margin-top: -20px; */
+ }
+
+ /*Parcelamento*/
+
+ .parcelamento {
+    font-size: 14px;
+    /* font-weight: bold; */
+    color: #e9c80c;
+    background-color: #111110;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: default;
+ }
+
+ /*Tamanho*/
+
+ label {
+    font-size: 25px;
+    color: #f5f5f5;
+    margin-right: 20px;
+    padding: 10;
+ }
+
+ /*caixa do tamanho*/
+
+ select {
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(202, 177, 242);
+    padding: 10px;
+    background-color: #e9c80cf8;
+ }
+
+
+ /*Complementos*/
+
+
+ .caixa #nome-produto {
+    font-size: 230%;
+    /* margin-bottom: 30px; */
+    color: #e9c80cf8;
+    cursor: default;
+
+ }
+
+ .caixa #descricao-produto {
+   font-size: 144%;
+    margin-bottom: 57px;
+    color: #e3e3e3;
+    margin-top: 18px;
+    cursor: default;
+ }
+
+ div.caixa #botaocompra {
+    font-size: 30px;
+    padding: 17px;
+    border-radius: 40px;
+    position: relative;
+    top: 40px;
+    left: 45px;
+ } 
+
+
+ #botaocompra:hover{
+    cursor:pointer;
+    background-color: #e9c80cf8;
+    color: #f5f5f5;
+ }
+
+} 
