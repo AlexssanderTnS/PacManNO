@@ -20,7 +20,7 @@ body {
   background-image: url(/imgs/labirinto.jpg); /* Define imagem de fundo */
   width: 100%; /* Largura total */
   font-family: 'Fredoka One', sans-serif; /* Fonte alternativa */
-  height: 350vh; /* Altura da página */
+  height: 240vh; /* Altura da página */
 }
 
 header {
@@ -259,18 +259,6 @@ div.Btop p{
 }
 
 
-#fala{
-  width: 14%;
-  position:absolute; /* Posição relativa */
-  top: 90%;
-  left: 35%;
-}
-
-#copy{
-  padding: 5%;
- margin-left: 30%;
-}
-
 div.pacman {
   position: absolute; /* Posição absoluta */
   top: 75%; /* Distância do topo */
@@ -304,106 +292,6 @@ div.pacman {
   animation: eat 1s linear 0s infinite; /* Animação padrão */
 }
 
-/* Animation*/
-
-@keyframes spin1 {
-  0% { transform: rotate(0deg); } /* Início sem rotação */
-  50% { transform: rotate(-35deg); } /* Boca abre para cima */
-}
-
-@keyframes spin2 {
-  0% { transform: rotate(0deg); } /* Início sem rotação */
-  50% { transform: rotate(35deg); } /* Boca abre para baixo */
-}
-
-@-moz-keyframes spin1 {
-  0% { transform: rotate(0deg); } /* Firefox: início sem rotação */
-  50% { transform: rotate(-35deg); } /* Boca abre para cima */
-}
-
-@-moz-keyframes spin2 {
-  0% { transform: rotate(0deg); } /* Firefox: início sem rotação */
-  50% { transform: rotate(35deg); } /* Boca abre para baixo */
-}
-
-@-webkit-keyframes spin1 {
-  0% { transform: rotate(0deg); } /* Chrome/Safari: início sem rotação */
-  50% { transform: rotate(-35deg); } /* Boca abre para cima */
-}
-
-@-webkit-keyframes spin2 {
-  0% { transform: rotate(0deg); } /* Chrome/Safari: início sem rotação */
-  50% { transform: rotate(35deg); } /* Boca abre para baixo */
-}
-
-@keyframes eat {
-  0% {
-    box-shadow:
-      100px 65px 0 0 white, /* Bolinhas do pacman */
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white,
-      1300px 65px 0 0 white;
-  }
-  100% {
-    box-shadow:
-      0px 65px 0 0 white, /* Move as bolinhas */
-      100px 65px 0 0 white,
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white;
-  }
-}
-
-@-moz-keyframes eat {
-  0% {
-    box-shadow:
-      100px 65px 0 0 white, /* Firefox: bolinhas do pacman */
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white,
-      1300px 65px 0 0 white;
-  }
-  100% {
-    box-shadow:
-      0px 65px 0 0 white, /* Move as bolinhas */
-      100px 65px 0 0 white,
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white;
-  }
-}
-
-@-webkit-keyframes eat {
-  0% {
-    box-shadow:
-      100px 65px 0 0 white, /* Chrome/Safari: bolinhas do pacman */
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white,
-      1300px 65px 0 0 white;
-  }
-  100% {
-    box-shadow:
-      0px 65px 0 0 white, /* Move as bolinhas */
-      100px 65px 0 0 white,
-      300px 65px 0 0 white,
-      500px 65px 0 0 white,
-      700px 65px 0 0 white,
-      900px 65px 0 0 white,
-      1100px 65px 0 0 white;
-  }
-}
 
 
 

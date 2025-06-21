@@ -9,31 +9,33 @@
   <link rel="stylesheet" href="compra.css">
   <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> 
   <title>NerdCore</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
 </head>
 
 <body>
-  <header class="nerdbar"> 
+  <header class="nerdbar">
 
-        <div class="logo"> 
-            <img src="/imgs/logoroxa.png" alt="logo"> 
-            <h1>NerdCore</h1> 
-        </div> 
+        <div class="logo">
+            <img src="/imgs/logoroxa.png" alt="logo">
+            <h1><a href="index.html">NerdCore</a></h1>
+        </div>
 
-      <div class="navbar"> 
-       <span id="menu" class="material-symbols-outlined" onclick="clickMenu()"> 
-        Menu
-       </span> 
-        <ul id="lista-menu">
-            <nav class="link"> 
-                <a href="/home.html">Inicio</a> 
-                <a href="#">Carrinho</a> 
-                <a target="_blank" href="/cadastro.html">Cadastre-se</a>
-                <a target="_blank" href="/login.html">Login</a> 
-                <a id="jogar" href="/Jogo/pacman-master/index.html">Jogue</a>
-            </nav> 
-        </ul>    
-      </div> 
-    </header> 
+        <div class="navbar">
+            <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+            </span>
+            <ul id="menu-list">
+                <nav class="link">
+                    <a href="/index.html">Inicio</a>
+                    <a href="carrinho.html">Carrinho</a>
+                    <a href="/cadastro.html">Cadastre-se</a>
+                    <a href="/login.html">Login</a>
+                    <a id="jogar" href="/Jogo/pacman-master/index.html">Jogue</a>
+                </nav>
+            </ul>
+        </div>
+    </header>
 
 
 
@@ -43,7 +45,7 @@
   <section>
 
     <div class="minaazul">
-      <img id="nome-produto" src="/CP/1 camisa chloe preta sem fundo.png" alt="Imagem do Produto">
+      <img id="imagem-produto" src="" alt="Imagem do Produto">
       <!-- <img id="clue" src="/CB/2 camisa chloe branca sem fundo.png"> -->
     </div>
   <ul id="lista">
@@ -68,7 +70,19 @@
 
   <!--Link com JS-->
 
-  <script src="/produtos.json"></script>
+  <script src="/produtos.js"></script>
+
+  <script>
+        function clickMenu() {
+            const menuList = document.getElementById("menu-list");
+            if (menuList.style.display === "block") {
+                menuList.style.display = "none";
+            } else {
+                menuList.style.display = "block";
+            }
+        }
+
+    </script>
 
 </body>
 

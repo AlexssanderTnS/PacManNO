@@ -27,7 +27,7 @@ header {
     border-bottom: solid #c4c62a;
 }
 
-header h1{
+header h1 {
     font-style: italic;
 }
 
@@ -39,7 +39,7 @@ h1 {
     cursor: default;
 }
 
-h2{
+h2 {
     font-size: 9px;
 }
 
@@ -125,12 +125,40 @@ nav a:hover {
     animation: pisca-cor 1s infinite;
 }
 
+#menu {
+    display: none;
+    /* Esconde o menu */
+}
+
+
+h1 a {
+    text-decoration: none;
+    /* Remove sublinhado */
+    color: #f2ff03;
+    /* Cor do título */
+    transition: color
+}
+
 @keyframes pisca-cor {
-    0% {color: #FF0000;}
-    25% {color: #FFB8FF;}
-    50% {color: #00FFFF;}
-    75% {color: #FFB852;}
-    100% {color: #FF0000;}
+    0% {
+        color: #FF0000;
+    }
+
+    25% {
+        color: #FFB8FF;
+    }
+
+    50% {
+        color: #00FFFF;
+    }
+
+    75% {
+        color: #FFB852;
+    }
+
+    100% {
+        color: #FF0000;
+    }
 }
 
 
@@ -153,7 +181,7 @@ div.minaazul img {
     width: 490px;
     display: flex;
     top: 30px;
-    
+
 }
 
 
@@ -236,7 +264,7 @@ select {
 }
 
 .caixa #descricao-produto {
-   font-size: 144%;
+    font-size: 144%;
     margin-bottom: 57px;
     color: #e3e3e3;
     margin-top: 18px;
@@ -253,8 +281,8 @@ div.caixa #botaocompra {
 }
 
 
-#botaocompra:hover{
-    cursor:pointer;
+#botaocompra:hover {
+    cursor: pointer;
     background-color: #e9c80cf8;
     color: #f5f5f5;
 }
@@ -262,260 +290,305 @@ div.caixa #botaocompra {
 @media screen and (max-width:769px) {
     /*body do cadastro*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', monospace; /* Fonte padrão */
-    font-weight: 500; /* Peso da fonte */
-    text-align: left; 
-  }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Press Start 2P', monospace;
+        /* Fonte padrão */
+        font-weight: 500;
+        /* Peso da fonte */
+        text-align: left;
+    }
 
 
-body {
-    background-image: url(imgs/labirinto.jpg);
-    font-family: 'Press Start 2P', monospace;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10%;
-    /* justify-content: center; esse comando alem de alinhar ao centro pode causar problemas com a visualização da tela, pois ira centralizar tudo e nao ficará nada colado ao topo */
-    /* margin: 10%;  O margin na body pode causar problemas de layout, especialmente com o header fixo. 
+    body {
+        background-image: url(imgs/labirinto.jpg);
+        font-family: 'Press Start 2P', monospace;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+        /* justify-content: center; esse comando alem de alinhar ao centro pode causar problemas com a visualização da tela, pois ira centralizar tudo e nao ficará nada colado ao topo */
+        /* margin: 10%;  O margin na body pode causar problemas de layout, especialmente com o header fixo. 
     se tirarmos o margin será melhor para o layout geral. Alem disso, o height foi ajustado para 300vh para evitar problemas de rolagem.*/
 
-}
+    }
 
 
+    #menu {
+        display: block;
+        /* Exibe o menu */
+        color: #e5e900;
+        align-items: center;
+        position: relative;
+        top: -37px;
+    }
 
-/*header*/
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 160%;
-    border-bottom: solid #e5e900;
+    ul#menu-list {
+        display: flex;
+        /* Exibe os links em linha */
+        flex-direction: column;
+        /* Muda direção para coluna */
+        align-items: center;
+        /* Centraliza links */
+        gap: 10px;
+        /* Espaço entre links */
+    }
 
-}
-
-/* */
-header.nerdbar {
-    flex-direction: column; /* Muda direção para coluna */
-    align-items: center; /* Centraliza itens */
-  }
-
-/*logo no header*/
-div.logo img {
-    height: 120px;
-    padding: 1px;
-    margin-right: 20px;
-}
-
-
-div.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-style: italic;
-    justify-content: flex-end;
-}
-
-div.navbar {
-    flex-direction: column; /* Muda direção para coluna */
-    gap: 10px; /* Espaço entre links reduzido */
-  }
-
-div.navbar a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #e5e900;
-    font-size: 12px;
-    padding: 7px;
-
-}
-
-nav a:hover {
-    cursor: pointer;
-    animation: pisca-cor 1s infinite;
-}
-
-@keyframes pisca-cor {
-    0% { color: #FF0000; }
-    25% { color:#FFB8FF; }
-    50% { color: #00FFFF; }
-    75% { color:  #FFB852; }
-    100% { color: #FF0000; }
-}
-
-h1 {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 25px;
-
-    padding: 5%;
-    color: #f2ff03;
-}
-
-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row;
-    margin-bottom: 10%;
-
-}
+    #jogar {
+        display: none;
+    }
 
 
-div.minaazul img {
-    height: 540px;
-    width: 490px;
-    display: inline;
-    top: 70px;
-    left: 70px;
-}
+    /*header*/
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 160%;
+        border-bottom: solid #e5e900;
+
+    }
+
+    /* */
+    header.nerdbar {
+        flex-direction: column;
+        /* Muda direção para coluna */
+        align-items: center;
+        /* Centraliza itens */
+    }
+
+    /*logo no header*/
+    div.logo img {
+        height: 120px;
+        padding: 1px;
+        margin-right: 20px;
+    }
 
 
-/*div camisa*/
+    div.logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-style: italic;
+        justify-content: flex-end;
+    }
 
-div.minaazul {
+    div.navbar {
+        flex-direction: column;
+        /* Muda direção para coluna */
+        gap: 10px;
+        /* Espaço entre links reduzido */
+    }
 
-    align-items: center;
+    div.navbar a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #e5e900;
+        font-size: 12px;
+        padding: 7px;
 
+    }
 
-}
+    nav a:hover {
+        cursor: pointer;
+        animation: pisca-cor 1s infinite;
+    }
 
+    @keyframes pisca-cor {
+        0% {
+            color: #FF0000;
+        }
 
-/*caixa de compra*/
+        25% {
+            color: #FFB8FF;
+        }
 
+        50% {
+            color: #00FFFF;
+        }
 
-.caixa {
-    background-color: #0a0a2a;
-    padding: 1%;
-    border-radius: 15px;
-    height: 670px;
-    box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
-    position: relative;
-    top: 700px;
-    width: 630px;
-    right: 500px;
-    align-content: center;
+        75% {
+            color: #FFB852;
+        }
 
-}
+        100% {
+            color: #FF0000;
+        }
+    }
 
-/*preço*/
+    h1 {
+        font-family: 'Press Start 2P', monospace;
+        font-size: 25px;
 
-.preco {
-    font-size: 40px;
-    font-weight: bolder;
-    color: #ffcc00;
-    margin-bottom: 32px;
-    cursor: default;
-    /* margin-top: -20px; */
-}
+        padding: 5%;
+        color: #f2ff03;
+    }
 
-/*Parcelamento*/
+    section {
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        flex-direction: row;
+        margin-bottom: 10%;
 
-.parcelamento {
-    font-size: 14px;
-    /* font-weight: bold; */
-    color: #e9c80c;
-    background-color: #111110;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    cursor: default;
-
-}
-
-/*Tamanho*/
-
-label {
-    font-size: 25px;
-    color: #d8d4d4;
-    margin-right: 20px;
-    padding: 10;
-}
-
-/*caixa do tamanho*/
-
-select {
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(202, 177, 242);
-    padding: 10px;
-    background-color: #e9c80cf8;
-}
+    }
 
 
-/*Complementos*/
+    div.minaazul img {
+        height: 540px;
+        width: 490px;
+        display: inline;
+        top: 70px;
+        left: 70px;
+    }
 
 
-.caixa #nome-produto {
-    font-size: 230%;
-    /* margin-bottom: 30px; */
-    color: #e9c80cf8;
-    cursor: default;
-    margin-bottom: 40px;
-    margin-right: 500px;
-    
-}
+    /*div camisa*/
 
-.caixa #descricao-produto {
-   font-size: 144%;
-    margin-bottom: 100px;
-    color: #e3e3e3;
-    margin-top: 18px;
-    cursor: default;
+    div.minaazul {
 
-}
-
-div.caixa #botaocompra {
-    font-size: 30px;
-    padding: 17px;
-    border-radius: 40px;
-    position: relative;
-    top: 10px;
-     
-
-}
+        align-items: center;
 
 
-#botaocompra:hover{
-    cursor:pointer;
-    background-color: #e9c80cf8;
-    color: #f5f5f5;
+    }
 
-}
 
-ul#listamenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
+    /*caixa de compra*/
 
-#menu {
-    display: block; /* Exibe o menu */
-    color:#e5e900 ;
-    align-items: center;
-    position: relative;
-    top: -37px;    
-    left: 35px;
-    margin-bottom: 1px;
 
-}
+    .caixa {
+        background-color: #0a0a2a;
+        padding: 1%;
+        border-radius: 15px;
+        height: 670px;
+        box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
+        position: relative;
+        top: 700px;
+        width: 630px;
+        right: 500px;
+        align-content: center;
 
-nav.link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    background-color: #302f2f;
-    top: -18%;
+    }
 
-}
+    /*preço*/
+
+    .preco {
+        font-size: 40px;
+        font-weight: bolder;
+        color: #ffcc00;
+        margin-bottom: 32px;
+        cursor: default;
+        /* margin-top: -20px; */
+    }
+
+    /*Parcelamento*/
+
+    .parcelamento {
+        font-size: 14px;
+        /* font-weight: bold; */
+        color: #e9c80c;
+        background-color: #111110;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        cursor: default;
+
+    }
+
+    /*Tamanho*/
+
+    label {
+        font-size: 25px;
+        color: #d8d4d4;
+        margin-right: 20px;
+        padding: 10;
+    }
+
+    /*caixa do tamanho*/
+
+    select {
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgb(202, 177, 242);
+        padding: 10px;
+        background-color: #e9c80cf8;
+    }
+
+
+    /*Complementos*/
+
+
+    .caixa #nome-produto {
+        font-size: 230%;
+        /* margin-bottom: 30px; */
+        color: #e9c80cf8;
+        cursor: default;
+        margin-bottom: 40px;
+        margin-right: 500px;
+
+    }
+
+    .caixa #descricao-produto {
+        font-size: 144%;
+        margin-bottom: 100px;
+        color: #e3e3e3;
+        margin-top: 18px;
+        cursor: default;
+
+    }
+
+    div.caixa #botaocompra {
+        font-size: 30px;
+        padding: 17px;
+        border-radius: 40px;
+        position: relative;
+        top: 10px;
+
+
+    }
+
+
+    #botaocompra:hover {
+        cursor: pointer;
+        background-color: #e9c80cf8;
+        color: #f5f5f5;
+
+    }
+
+    ul#listamenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #menu {
+        display: block;
+        /* Exibe o menu */
+        color: #e5e900;
+        align-items: center;
+        position: relative;
+        top: -37px;
+        left: 35px;
+        margin-bottom: 1px;
+
+    }
+
+    nav.link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        background-color: #302f2f;
+        top: -18%;
+
+    }
 
 
 
