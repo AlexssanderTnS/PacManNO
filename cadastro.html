@@ -7,6 +7,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
   <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
+ <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
   <title>Cadastro</title>
   <link rel="stylesheet" href="/cadastro.css">
 </head>
@@ -23,16 +25,18 @@
     </div>
 
     <div class="navbar">
-
-      <nav class="link">
-        <a href="/index.html">Inicio</a>
-        <a href="carrinho.html">Carrinho</a>
-        <a target="_blank" href="cadastro.html">Cadastre-se</a>
-        <a target="_blank" href="login.html">Login</a>
-        <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a>
-
-      </nav>
-
+      <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+            </span>
+            <ul id="menu-list">
+                <nav class="link">
+                    <a href="/home.html">Inicio</a>
+                    <a href="carrinho.html">Carrinho</a>
+                    <a href="/cadastro.html">Cadastre-se</a>
+                    <a href="/login.html">Login</a>
+                    <a id="jogar" href="/Jogo/pacman-master/index.html">Jogue</a>
+                </nav>
+             </ul>
     </div>
   </header>
 
@@ -49,12 +53,12 @@
     <h1>Cadastre-se no estilo!</h1>
 
     <div class="botao-campo">
-      <input type="text" id="nomeCadastro" placeholder="Digite o seu nome completo">
+      <input type="text" id="nomeCadastro" placeholder="Nome completo">
       <p>erro</p>
     </div>
 
     <div class="botao-campo">
-      <input type="text" id="usuarioCadastro" placeholder="Digite o seu nome de usuário">
+      <input type="text" id="usuarioCadastro" placeholder="Nome de usuário">
       <p>erro</p>
     </div>
 
@@ -81,34 +85,34 @@
         <option value="">Selecione o seu gênero</option>
         <option value="feminino">Feminino</option>
         <option value="masculino">Masculino</option>
-        <option value="outro/prefironaodizer">Outro/ Prefiro não dizer</option>
+        <option value="outro/prefironaodizer">Outro/Prefiro não dizer</option>
       </select>
       <p>erro</p>
     </div>
 
     <!--Continuação dos inputs-->
     <div class="botao-campo">
-    <input type="text" name="mae" id="mae" placeholder="Digite o nome da sua mãe">
+    <input type="text" name="mae" id="mae" placeholder="Nome materno">
     <p>erro</p>
   </div>
     <div class="botao-campo">
-      <input type="text" id="cpf" name="cpf" maxlength="14" placeholder=" Digite o seu cpf  (000.000.000-00)">
+      <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF (000.000.000-00)">
       <p>erro</p>
     </div>
     
     <div class="botao-campo">
-      <input type="tel" name="celular" id="celular" placeholder="Digite o seu número (XX) XXXXX-XXXX">
+      <input type="tel" name="celular" id="celular" placeholder="Cel. (XX) XXXXX-XXXX">
       <p>erro</p>
     </div>
 
     <div class="botao-campo">
-      <input type="tel" name="fixo" id="fixo" placeholder="Digite o seu número fixo (DDD)">
+      <input type="tel" name="fixo" id="fixo" placeholder="Tel. Fixo(DDD)">
       <p>erro</p>
     </div>
 
     <div class="botao-campo">
       <input type="text" name="cep" id="cep" placeholder="Cep: 00000-000">
-      <p></p>
+      <p>erro</p>
     </div>
     <div class="botao-campo">
       <input type="text" name="estado" id="estado" placeholder="Estado">
@@ -133,12 +137,21 @@
       <input type="text" name="rua" id="rua" placeholder="Rua">
       <p>erro</p>
     </div>
+    
+    <div class="botao-campo">
+    <input type="text" name="complemento" id="complemento" placeholder="Complemento">
+    <p>erro</p>
+    </div> 
 
-    <input type="text" name="complemento" id="complemento" placeholder="complemento">
-
-    <button type="submit" id="pronto">Pronto!!</button>
-
-    <button id="limpar">Limpar tudo</button>
+    <section class="botao">
+      <div class="pronto1">
+      <button type="submit" id="pronto">Pronto!</button>
+      </div>
+      <div class="limpar1">
+      <button id="limpar">Limpar tudo</button>
+      </div>
+    </section>
+  
   </form>
 
 
@@ -174,6 +187,19 @@
   </script>
   <!--linkando o js ao html-->
   <script src="/cadastro.js"></script>
+
+   <script>
+        function clickMenu() {
+            const menuList = document.getElementById("menu-list");
+            if (menuList.style.display === "flex") {
+                menuList.style.display = "none";
+            } else {
+                menuList.style.display = "flex";
+            }
+        }
+
+    </script>
+
 </body>
 
 </html>
