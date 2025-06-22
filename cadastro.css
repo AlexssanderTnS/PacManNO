@@ -92,6 +92,13 @@ nav {
     display: flex;
     gap: 25px;
     font-size: 10px;
+
+}
+
+h1 a{
+  text-decoration: none; /* Remove sublinhado */
+  color: #f2ff03; /* Cor do título */
+  transition: color
 }
 
 #menu {
@@ -102,6 +109,7 @@ nav a:hover {
     cursor: pointer;
     animation: pisca-cor 1s infinite;
 }
+
 
 @keyframes pisca-cor {
     0% {
