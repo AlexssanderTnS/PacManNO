@@ -34,19 +34,17 @@ header {
 
 }
 
-/* */
 header.nerdbar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 1%;
-    background-color: #302f2f;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 130px;
-    position: sticky;
-    z-index: 100;
-
+    display: flex; /* Utilizo o Flexbox para organizar os elementos do header em linha */
+    align-items: center; /* Alinho todos os itens verticalmente ao centro */
+    gap: 15px; /* Espaço de 15px entre os itens (logo, nav etc) */
+    padding: 1%; /* Espaçamento interno do header */
+    background-color: #302f2f; /* Cor de fundo escura, para combinar com o estilo geek */
+    flex-direction: row; /* Organiza os elementos na horizontal */
+    justify-content: space-between; /* Espaça os elementos nas extremidades (logo de um lado, nav do outro) */
+    height: 130px; /* Altura definida para manter o header consistente */
+    position: sticky; /* Mantém o header fixo no topo durante a rolagem */
+    z-index: 100; /* Garante que o header fique por cima de outros elementos da página */
 }
 
 
@@ -64,165 +62,152 @@ div.logo img:hover {
 
 }
 
+/* Estilizando a área da logo no header */
 div.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-style: italic;
-    justify-content: space-around;
+    display: flex; /* Uso o Flexbox pra organizar os elementos lado a lado */
+    flex-direction: row; /* Os elementos vão ficar na horizontal */
+    justify-content: center; /* Centralizo os itens, mas esse foi sobrescrito abaixo */
+    align-items: center; /* Alinho verticalmente no centro */
+    text-transform: uppercase; /* Deixo o texto da logo todo em maiúsculas */
+    font-style: italic; /* Estilo itálico pra dar um toque retrô */
+    justify-content: space-around; /* Substitui o "center": agora os itens ficam bem distribuídos com espaços entre eles */
 }
 
+/* Navbar (links do menu) com espaçamento e fonte visível */
 div.navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 1%;
-    font-size: 18px;
-    gap: 5%;
+    display: flex; /* Uso Flexbox pra organizar os links na horizontal */
+    justify-content: space-around; /* Espaço igual entre os links */
+    padding: 1%; /* Espaçamento interno */
+    font-size: 18px; /* Deixo a fonte maior pra destacar os links */
+    gap: 5%; /* Espaçamento entre os elementos */
 }
 
+/* Links da navbar com estilo geek */
 div.navbar a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #e5e900;
+    text-decoration: none; /* Tiro o sublinhado dos links */
+    text-transform: uppercase; /* Deixo tudo em caixa alta */
+    color: #e5e900; /* Amarelo neon pro destaque */
 }
 
+/* Estilizo o <nav> como container flexível horizontal */
 nav {
-    display: flex;
-    gap: 25px;
-    font-size: 10px;
-
+    display: flex; /* Flexbox horizontal por padrão */
+    gap: 25px; /* Espaçamento entre os links */
+    font-size: 10px; /* Tamanho pequeno para manter o estilo retro/gamer */
 }
 
-h1 a{
-  text-decoration: none; /* Remove sublinhado */
-  color: #f2ff03; /* Cor do título */
-  transition: color
+/* Links dentro de um h1 (título principal) */
+h1 a {
+    text-decoration: none; /* Tiro o sublinhado */
+    color: #f2ff03; /* Cor amarela neon pro título */
+    transition: color; /* Habilito transição suave quando mudar a cor */
 }
 
+/* Escondo o botão/menu hamburguer (ele aparece só no mobile via @media) */
 #menu {
     display: none;
 }
 
+/* Animação piscando colorida ao passar o mouse nos links da nav */
 nav a:hover {
-    cursor: pointer;
-    animation: pisca-cor 1s infinite;
+    cursor: pointer; /* Cursor vira uma mãozinha */
+    animation: pisca-cor 1s infinite; /* Ativo a animação que pisca as cores */
 }
 
-
+/* Crio a animação que muda de cor várias vezes em loop */
 @keyframes pisca-cor {
-    0% {
-        color: #FF0000;
-    }
-
-    25% {
-        color: #FFB8FF;
-    }
-
-    50% {
-        color: #00FFFF;
-    }
-
-    75% {
-        color: #FFB852;
-    }
-
-    100% {
-        color: #FF0000;
-    }
+    0%   { color: #FF0000; }
+    25%  { color: #FFB8FF; }
+    50%  { color: #00FFFF; }
+    75%  { color: #FFB852; }
+    100% { color: #FF0000; }
 }
 
-
-
+/* Título principal da página */
 h1 {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 25px;
-
-    padding: 5%;
-    color: #f2ff03;
+    font-family: 'Press Start 2P', monospace; /* Fonte retrô estilo fliperama */
+    font-size: 25px; /* Tamanho grande pra destacar */
+    padding: 5%; /* Espaçamento interno */
+    color: #f2ff03; /* Cor amarela neon */
 }
 
 /*box do cadastro*/
+/* Caixa principal do formulário de cadastro */
 .parte1 {
-    background-color: rgb(6, 11, 108);
-    padding: 50px 50px;
-    width: 50%;
-    gap: 20px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
-    text-align: center;
+    background-color: rgb(6, 11, 108); /* Fundo azul escuro estilo noturno/geek */
+    padding: 50px 50px; /* Espaçamento interno */
+    width: 50%; /* Metade da largura da tela */
+    gap: 20px; /* Espaço entre os elementos (apesar de funcionar melhor com display flex ou grid) */
+    margin-top: 5%; /* Distância do topo da página */
+    margin-bottom: 5%; /* Distância do rodapé */
+    height: auto; /* Altura ajustável de acordo com o conteúdo */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8); /* Sombra amarela neon ao redor */
+    text-align: center; /* Centraliza os textos internos */
 }
 
-/*inputs*/
+/* Inputs da caixa de cadastro */
 .parte1 input {
-    width: 100%;
-    padding: 20px;
-    margin: 10px 0;
-    margin-top: 15px;
-    border: 3px solid #f2ff03;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: rgb(7, 24, 99);
-    color: aliceblue;
-
+    width: 100%; /* Ocupa toda a largura da caixa */
+    padding: 20px; /* Espaço interno */
+    margin: 10px 0; /* Espaço vertical entre os campos */
+    margin-top: 15px; /* Ajuste extra pra separar melhor */
+    border: 3px solid #f2ff03; /* Borda amarela neon */
+    border-radius: 6px; /* Cantos arredondados */
+    font-size: 14px; /* Tamanho da fonte interna */
+    background-color: rgb(7, 24, 99); /* Fundo azul escuro */
+    color: aliceblue; /* Cor do texto digitado */
 }
 
-
-/*coloração das fontes dos inputs*/
+/* Placeholder (texto de sugestão dentro dos inputs) */
 input::placeholder {
-    color: rgb(255, 255, 255);
-    opacity: 10px;
-    font-size: small;
+    color: rgb(255, 255, 255); /* Branco */
+    opacity: 10px; /* Isso aqui na verdade deveria ser entre 0 e 1 (ex: 1 = 100%) */
+    font-size: small; /* Tamanho menor */
 }
 
-/* Aplica estilos ao elemento <input> quando ele está em foco (selecionado pelo usuário). */
+/* Quando o input está em foco (clicado) */
 input:focus {
-    outline: none;
-    border-color: #f2ff03;
-    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
+    outline: none; /* Tira a borda automática do navegador */
+    border-color: #f2ff03; /* Realça a borda com a cor neon */
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8); /* Brilho externo neon */
 }
 
+/* Efeito visual no placeholder quando o campo é selecionado */
 input:focus::placeholder {
-    color: #f2ff03;
-    font-size: 12px;
-    transform: translateY(-20px);
-    transition: all 0.2s ease;
-    opacity: 1;
+    color: #f2ff03; /* Muda a cor pra amarelo */
+    font-size: 12px; /* Reduz tamanho */
+    transform: translateY(-20px); /* Sobe o texto */
+    transition: all 0.2s ease; /* Suaviza a transição */
+    opacity: 1; /* Garante que fique visível */
 }
 
-/*select dos gêneros*/
+/* Select dos gêneros (dropdown) */
 #generos {
-    background-color: yellow;
-    width: 50%;
-    height: 40px;
-    margin: 10px;
-    border-radius: 6px;
-    font-size: medium;
-    align-items: center;
+    background-color: yellow; /* Fundo amarelo pra chamar atenção */
+    width: 50%; /* Metade da largura */
+    height: 40px; /* Altura do campo */
+    margin: 10px; /* Espaçamento em volta */
+    border-radius: 6px; /* Arredondamento */
+    font-size: medium; /* Tamanho da fonte padrão */
+    align-items: center; /* Alinhamento vertical (só funcionaria com display flex) */
 }
 
-/*dropdown*/
+/* Opções do dropdown */
 option {
-    background-color: yellow;
-    color: black;
-    display: block;
-    text-align: center;
-
+    background-color: yellow; /* Fundo amarelo */
+    color: black; /* Texto preto pra contraste */
+    display: block; /* Cada item em linha própria */
+    text-align: center; /* Centralizado horizontalmente */
 }
 
-
-/*data de nascimento*/
+/* Campo de data de nascimento */
 #date {
     background-color: yellow;
     color: black;
-
 }
 
-/*button que realiza o cadastro e o direcionamento para o home*/
+/* Botão para enviar o cadastro (estilo pacman) */
 #pronto {
     background-color: yellow;
     color: black;
@@ -233,20 +218,19 @@ option {
     font-size: 20px;
     padding-left: 5px;
     margin-top: 5%;
-    border: 0px solid;
-    border-radius: 5%;
-    float: left;
-    box-shadow: 0 0 15px #ffff00;
-
+    border: 0px solid; /* Sem borda */
+    border-radius: 5%; /* Cantos arredondados */
+    float: left; /* Fica na esquerda da tela */
+    box-shadow: 0 0 15px #ffff00; /* Efeito neon amarelo */
 }
 
+/* Efeito ao passar o mouse no botão (expande e brilha mais) */
 .pacman-button:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px #ffff00;
 }
 
-
-/*button que limpa todos os campos*/
+/* Botão para limpar os campos */
 #limpar {
     background-color: yellow;
     color: black;
@@ -259,32 +243,28 @@ option {
     margin-top: 5%;
     border: 0px solid;
     border-radius: 5%;
-    float: right;
+    float: right; /* Vai para a direita */
     box-shadow: 0 0 15px #ffff00;
 }
 
-
-/*mensagem de erro*/
+/* Hover no botão da form (usado possivelmente pra validação) */
 .form button:hover {
-    background-color: red;
+    background-color: red; /* Mostra erro ou atenção */
 }
 
-/*mensagem de erro*/
+/* Mensagem de erro (ainda invisível) */
 .botao-campo p {
-    color: red;
+    color: red; /* Cor vermelha padrão de erro */
     font-size: 1em;
-    visibility: hidden;
+    visibility: hidden; /* Só aparece se houver erro */
 }
 
-
-/*mensagem de erro*/
-
+/* Campo com erro: borda vermelha */
 .botao-campo.error input {
     border-color: red;
-
 }
 
-/*torna o erro visível*/
+/* Exibe a mensagem de erro */
 .botao-campo.error p {
     visibility: visible;
 }
@@ -497,7 +477,7 @@ option {
         border-radius: 6px;
         font-size: xx-small;
         align-items: center;
-        
+
 
 
     }
@@ -510,8 +490,8 @@ option {
         display: flex;
         justify-content: left;
         text-align: center;
-        
-        
+
+
 
 
     }
@@ -538,12 +518,12 @@ option {
         box-shadow: 0 0 15px #ffff00;
     }
 
+    /*Botão pronto*/
     #pronto {
         display: block;
         align-items: center;
-        
         width: 167px;
-        font-size: la;
+
     }
 
     .pacman-button:hover {
@@ -568,53 +548,208 @@ option {
         box-shadow: 0 0 15px #ffff00;
     }
 
-    .botao{
-        display:flex;
+    /*alinhamento dos botões*/
+    .botao {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
-    }
-
-
-    /*mensagem de erro*/
-    .form button:hover {
-        background-color: red;
-    }
-
-    /*mensagem de erro*/
-    .botao-campo p {
-        color: red;
-        font-size: 1em;
-        visibility: hidden;
-    }
-
-
-    /*mensagem de erro*/
-
-    .botao-campo.error input {
-        border-color: red;
 
     }
 
-    /*torna o erro visível*/
-    .botao-campo.error p {
-        visibility: visible;
+/* Esconde o botão "jogar" no mobile */
+#jogar {
+    display: none;
+}
+
+/* Animação para o efeito de piscar e mudar de cor dos links ao passar o mouse */
+@keyframes pisca-cor {
+    0% {
+        color: #FF0000; /* Vermelho */
     }
-
-    cpf::placeholder {
-        font-size: x-small;
+    25% {
+        color: #FFB8FF; /* Rosa claro */
     }
-
-    #celular::placeholder {
-        font-size: x-small;
+    50% {
+        color: #00FFFF; /* Ciano */
     }
-
-    #fixo::placeholder {
-        font-size: x-small;
+    75% {
+        color: #FFB852; /* Laranja claro */
     }
+    100% {
+        color: #FF0000; /* Volta para vermelho */
+    }
+}
 
+/* Título principal no topo da página */
+h1 {
+    font-family: 'Press Start 2P', monospace; /* Fonte retrô */
+    font-size: 20px; /* Tamanho menor no mobile */
+    padding: 5%; /* Espaço interno ao redor do título */
+    color: #f2ff03; /* Amarelo neon */
+}
 
+/* Estilo da caixa de cadastro */
+.parte1 {
+    background-color: rgb(6, 11, 108); /* Fundo azul escuro */
+    padding: 20px 20px;
+    width: 80%;
+    gap: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 120%;
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8); /* Brilho amarelo */
+    text-align: auto; /* Alinhamento automático */
+}
+
+/* Estilo dos campos de input dentro da parte1 */
+.parte1 input {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 5px 3px;
+    margin-top: 30px;
+    border: 3px solid #f2ff03; /* Borda amarela */
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: rgb(7, 24, 99); /* Fundo azul escuro */
+    color: aliceblue; /* Cor clara do texto */
+    box-sizing: border-box;
+}
+
+/* Placeholder (texto de dentro dos inputs) */
+input::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 10px;
+}
+
+/* Quando clica no input, ele brilha */
+input:focus {
+    outline: none;
+    border-color: #f2ff03;
+    box-shadow: 0 0 20px rgba(246, 255, 0, 0.8);
+}
+
+/* Efeito que faz o placeholder subir quando clica */
+input:focus::placeholder {
+    color: #f2ff03;
+    font-size: 12px;
+    transform: translateY(-15px);
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+
+/* Estilo do select de gênero */
+#generos {
+    background-color: yellow;
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: xx-small;
+    align-items: center;
+}
+
+/* Estilo das opções do dropdown */
+option {
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+}
+
+/* Campo de data de nascimento */
+#date {
+    background-color: yellow;
+    color: black;
+}
+
+/* Botão "Pronto" (enviar cadastro) */
+#pronto {
+    background-color: yellow;
+    color: black;
+    width: 30%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 5%;
+    border: 0px solid;
+    border-radius: 5%;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* Botão pronto com tamanho fixo (ajuste extra no mobile) */
+#pronto {
+    display: block;
+    align-items: center;
+    width: 167px;
+}
+
+/* Efeito de "zoom" no botão pronto ao passar o mouse */
+.pacman-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ffff00;
+}
+
+/* Botão "Limpar" (limpa os campos do formulário) */
+#limpar {
+    background-color: yellow;
+    color: black;
+    width: 150px;
+    height: 50px;
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 1px;
+    border: 0px solid;
+    border-radius: 5%;
+    box-shadow: 0 0 15px #ffff00;
+}
+
+/* Agrupamento dos botões "Pronto" e "Limpar" */
+.botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mudança de cor para vermelho se o botão for clicado com erro */
+.form button:hover {
+    background-color: red;
+}
+
+/* Mensagem de erro oculta por padrão */
+.botao-campo p {
+    color: red;
+    font-size: 1em;
+    visibility: hidden;
+}
+
+/* Aplica borda vermelha em input com erro */
+.botao-campo.error input {
+    border-color: red;
+}
+
+/* Torna visível a mensagem de erro */
+.botao-campo.error p {
+    visibility: visible;
+}
+
+/* Diminui o texto do placeholder em campos específicos no mobile */
+cpf::placeholder {
+    font-size: x-small;
+}
+#celular::placeholder {
+    font-size: x-small;
+}
+#fixo::placeholder {
+    font-size: x-small;
+}
 
 
 
