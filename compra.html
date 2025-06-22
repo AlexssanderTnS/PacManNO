@@ -7,35 +7,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="compra.css">
-  <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
+  <link rel="icon" href="/imgs/LogoTOPO.png" type="image/x-icon"> 
   <title>NerdCore</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+
 </head>
 
 <body>
-  <header class="nerdbar"> <!-- Cabeçalho com barra de navegação -->
+  <header class="nerdbar">
 
-        <div class="logo"> <!-- Container do logo -->
-            <img src="/imgs/logoroxa.png" alt="logo"> <!-- Imagem do logo -->
-            <h1><a href="index.html">NerdCore</a></h1> <!-- Título do site -->
-        </div> <!-- Fim do container do logo -->
+        <div class="logo">
+            <img src="/imgs/logoroxa.png" alt="logo">
+            <h1><a href="index.html">NerdCore</a></h1>
+        </div>
 
-        <div class="navbar"> <!-- Container da barra de navegação -->
+        <div class="navbar">
+            <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">
+                menu
+            </span>
+            <ul id="menu-list">
+                <nav class="link">
+                    <a href="/index.html">Inicio</a>
+                    <a href="carrinho.html">Carrinho</a>
+                    <a href="/cadastro.html">Cadastre-se</a>
+                    <a href="/login.html">Login</a>
+                    <a id="jogar" href="/Jogo/pacman-master/index.html">Jogue</a>
+                </nav>
+            </ul>
+        </div>
+    </header>
 
-            <nav class="link"> <!-- Navegação principal -->
-                <a href="/index.html">Inicio</a> <!-- Link para a página inicial -->
-                <a href="#">Carrinho</a> <!-- Link para o carrinho (sem destino definido) -->
-                <a target="_blank" href="/cadastro.html">Cadastre-se</a> <!-- Link para cadastro em nova aba -->
-                <a target="_blank" href="/login.html">Login</a> <!-- Link para login em nova aba -->
-                <a target="_blank" href="/Jogo/pacman-master/index.html">Jogue</a> <!-- Link para jogo em nova aba -->
-            </nav> <!-- Fim da navegação principal -->
 
-        </div> <!-- Fim do container da barra de navegação -->
-    </header> <!-- Fim do cabeçalho -->
-
-
-
-
-  <!--Imagem da Camisa-->
 
 
   <!--Caixa de Compra-->
@@ -43,24 +45,24 @@
   <section>
 
     <div class="minaazul">
-      <img id="imagem-produto" src=" " alt="Imagem do Produto">
+      <img id="imagem-produto" src="" alt="Imagem do Produto">
       <!-- <img id="clue" src="/CB/2 camisa chloe branca sem fundo.png"> -->
     </div>
+  <ul id="lista">
+     <div class="caixa">
+       <h2 id="nome-produto">Nome do Produto</h2>
+       <p id="descricao-produto">Descrição aqui...</p>
+       <div class="preco" id="preco-produto">R$ --,--</div>
+       <div class="parcelamento">em 12x R$16,99 "Sem Juros"</div>
+       <label for="tamanho">Tamanho:</label>
+       <select id="tamanho" name="tamanho">
+         <option value="P">P</option>
+         <option value="M">M</option>
+         <option value="G">G</option>
+         <option value="GG">GG</option>
+       </select>
 
-    <div class="caixa">
-      <h2 id="nome-produto">Nome do Produto</h2>
-      <p id="descricao-produto">Descrição aqui...</p>
-      <div class="preco" id="preco-produto">R$ --,--</div>
-      <div class="parcelamento">em 12x R$16,99 "Sem Juros"</div>
-      <label for="tamanho">Tamanho:</label>
-      <select id="tamanho" name="tamanho">
-        <option value="P">P</option>
-        <option value="M">M</option>
-        <option value="G">G</option>
-        <option value="GG">GG</option>
-      </select>
-
-      <button id="botaocompra" href="Prototipo.html">Comprar</button>
+       <button id="botaocompra" href="">Comprar</button>
     </div>
   </section>
 
@@ -68,9 +70,20 @@
 
   <!--Link com JS-->
 
-  <script src="produtos.js"></script>
+  <script src="/produtos.js"></script>
+
+  <script>
+        function clickMenu() {
+            const menuList = document.getElementById("menu-list");
+            if (menuList.style.display === "block") {
+                menuList.style.display = "none";
+            } else {
+                menuList.style.display = "block";
+            }
+        }
+
+    </script>
 
 </body>
 
 </html>
-
