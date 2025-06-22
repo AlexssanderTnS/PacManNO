@@ -46,9 +46,7 @@
 
     <div class="minaazul">
       <img id="imagem-produto" src="" alt="Imagem do Produto">
-      <!-- <img id="clue" src="/CB/2 camisa chloe branca sem fundo.png"> -->
     </div>
-  <ul id="lista">
      <div class="caixa">
        <h2 id="nome-produto">Nome do Produto</h2>
        <p id="descricao-produto">Descrição aqui...</p>
@@ -75,10 +73,10 @@
   <script>
         function clickMenu() {
             const menuList = document.getElementById("menu-list");
-            if (menuList.style.display === "block") {
+            if (menuList.style.display === "flex") {
                 menuList.style.display = "none";
             } else {
-                menuList.style.display = "block";
+                menuList.style.display = "flex";
             }
         }
 

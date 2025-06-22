@@ -288,277 +288,9 @@ div.caixa #botaocompra {
 }
 
 @media screen and (max-width:769px) {
-    /*body do cadastro*/
-
-<<<<<<< HEAD
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', monospace; /* Fonte padrão */
-    font-weight: 500; /* Peso da fonte */
-    text-align: left; 
-  }
-
-
-body {
-    background-image: url(imgs/labirinto.jpg);
-    font-family: 'Press Start 2P', monospace;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10%;
-    /* justify-content: center; esse comando alem de alinhar ao centro pode causar problemas com a visualização da tela, pois ira centralizar tudo e nao ficará nada colado ao topo */
-    /* margin: 10%;  O margin na body pode causar problemas de layout, especialmente com o header fixo. 
-    se tirarmos o margin será melhor para o layout geral. Alem disso, o height foi ajustado para 300vh para evitar problemas de rolagem.*/
-
-}
 
 
 
-/*header*/
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 160%;
-    border-bottom: solid #e5e900;
-
-}
-
-/* */
-header.nerdbar {
-    flex-direction: column; /* Muda direção para coluna */
-    align-items: center; /* Centraliza itens */
-  }
-
-/*logo no header*/
-div.logo img {
-    height: 120px;
-    padding: 1px;
-    margin-right: 20px;
-}
-
-
-div.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-style: italic;
-    justify-content: flex-end;
-}
-
-div.navbar {
-    flex-direction: column; /* Muda direção para coluna */
-    gap: 10px; /* Espaço entre links reduzido */
-  }
-
-div.navbar a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #e5e900;
-    font-size: 12px;
-    padding: 7px;
-
-}
-
-nav a:hover {
-    cursor: pointer;
-    animation: pisca-cor 1s infinite;
-}
-
-@keyframes pisca-cor {
-    0% { color: #FF0000; }
-    25% { color:#FFB8FF; }
-    50% { color: #00FFFF; }
-    75% { color:  #FFB852; }
-    100% { color: #FF0000; }
-}
-
-h1 {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 25px;
-
-    padding: 5%;
-    color: #f2ff03;
-}
-
-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row;
-    margin-bottom: 10%;
-
-}
-
-
-div.minaazul img {
-    height: 540px;
-    width: 490px;
-    display: inline;
-    top: 70px;
-    left: 70px;
-}
-
-
-/*div camisa*/
-
-div.minaazul {
-
-    align-items: center;
-
-
-}
-
-
-/*caixa de compra*/
-
-
-.caixa {
-    background-color: #0a0a2a;
-    padding: 1%;
-    border-radius: 15px;
-    height: 670px;
-    box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
-    position: relative;
-    top: 700px;
-    width: 630px;
-    right: 500px;
-    align-content: center;
-
-}
-
-/*preço*/
-
-.preco {
-    font-size: 40px;
-    font-weight: bolder;
-    color: #ffcc00;
-    margin-bottom: 32px;
-    cursor: default;
-    /* margin-top: -20px; */
-}
-
-/*Parcelamento*/
-
-.parcelamento {
-    font-size: 14px;
-    /* font-weight: bold; */
-    color: #e9c80c;
-    background-color: #111110;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    cursor: default;
-
-}
-
-/*Tamanho*/
-
-label {
-    font-size: 25px;
-    color: #d8d4d4;
-    margin-right: 20px;
-    padding: 10;
-}
-
-/*caixa do tamanho*/
-
-select {
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(202, 177, 242);
-    padding: 10px;
-    background-color: #e9c80cf8;
-}
-
-
-/*Complementos*/
-
-
-.caixa #nome-produto {
-    font-size: 230%;
-    /* margin-bottom: 30px; */
-    color: #e9c80cf8;
-    cursor: default;
-    margin-bottom: 40px;
-    margin-right: 500px;
-    
-}
-
-.caixa #descricao-produto {
-   font-size: 144%;
-    margin-bottom: 100px;
-    color: #e3e3e3;
-    margin-top: 18px;
-    cursor: default;
-
-}
-
-div.caixa #botaocompra {
-    font-size: 30px;
-    padding: 17px;
-    border-radius: 40px;
-    position: relative;
-    top: 10px;
-     
-
-}
-
-
-#botaocompra:hover{
-    cursor:pointer;
-    background-color: #e9c80cf8;
-    color: #f5f5f5;
-
-}
-
-ul#listamenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-#menu {
-    display: block; /* Exibe o menu */
-    color:#e5e900 ;
-    align-items: center;
-    position: relative;
-    top: -37px;    
-    left: 35px;
-    margin-bottom: 1px;
-
-}
-
-nav.link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    background-color: #302f2f;
-    top: -18%;
-
-}
- 
-#menu.material-symbols-outline {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-smoothing: antialiased;
-
-}
-=======
     * {
         margin: 0;
         padding: 0;
@@ -567,23 +299,66 @@ nav.link {
         /* Fonte padrão */
         font-weight: 500;
         /* Peso da fonte */
-        text-align: left;
+      
     }
-
 
     body {
-        background-image: url(imgs/labirinto.jpg);
-        font-family: 'Press Start 2P', monospace;
-        height: 100px;
         display: flex;
         flex-direction: column;
-        margin-bottom: 10%;
-        /* justify-content: center; esse comando alem de alinhar ao centro pode causar problemas com a visualização da tela, pois ira centralizar tudo e nao ficará nada colado ao topo */
-        /* margin: 10%;  O margin na body pode causar problemas de layout, especialmente com o header fixo. 
-    se tirarmos o margin será melhor para o layout geral. Alem disso, o height foi ajustado para 300vh para evitar problemas de rolagem.*/
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    /* começem a copiar daqui   */
+
+    header {
+        width: 100%;
+        /* Largura total do header */
+    }
+
+    header.nerdbar {
+        flex-direction: column;
+        /* Muda direção para coluna */
+        align-items: center;
+        /* Centraliza itens */
+    }
+
+    div.navbar ul {
+        display: none;
+    }
+
+    div.logo img {
+        height: 100px;
+        /* Reduz altura da logo */
+    }
+
+    div.logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-style: italic;
+        justify-content: flex-end;
 
     }
 
+    div.navbar {
+        flex-direction: column;
+        /* Muda direção para coluna */
+        gap: 10px;
+        /* Espaço entre links reduzido */
+    }
+
+    div.navbar a {
+        font-size: 14px;
+        /* Reduz tamanho da fonte */
+        padding: 5px;
+        /* Adiciona espaçamento interno */
+    }
 
     #menu {
         display: block;
@@ -595,7 +370,7 @@ nav.link {
     }
 
     ul#menu-list {
-        display: flex;
+        display: none;
         /* Exibe os links em linha */
         flex-direction: column;
         /* Muda direção para coluna */
@@ -605,124 +380,38 @@ nav.link {
         /* Espaço entre links */
     }
 
+    
+
     #jogar {
         display: none;
-    }
-
-
-    /*header*/
-    header {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 160%;
-        border-bottom: solid #e5e900;
-
-    }
-
-    /* */
-    header.nerdbar {
-        flex-direction: column;
-        /* Muda direção para coluna */
-        align-items: center;
-        /* Centraliza itens */
-    }
-
-    /*logo no header*/
-    div.logo img {
-        height: 120px;
-        padding: 1px;
-        margin-right: 20px;
-    }
-
-
-    div.logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        font-style: italic;
-        justify-content: flex-end;
-    }
-
-    div.navbar {
-        flex-direction: column;
-        /* Muda direção para coluna */
-        gap: 10px;
-        /* Espaço entre links reduzido */
-    }
-
-    div.navbar a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #e5e900;
-        font-size: 12px;
-        padding: 7px;
-
-    }
-
-    nav a:hover {
-        cursor: pointer;
-        animation: pisca-cor 1s infinite;
-    }
-
-    @keyframes pisca-cor {
-        0% {
-            color: #FF0000;
-        }
-
-        25% {
-            color: #FFB8FF;
-        }
-
-        50% {
-            color: #00FFFF;
-        }
-
-        75% {
-            color: #FFB852;
-        }
-
-        100% {
-            color: #FF0000;
-        }
     }
 
     h1 {
         font-family: 'Press Start 2P', monospace;
         font-size: 25px;
-
         padding: 5%;
         color: #f2ff03;
     }
 
     section {
         display: flex;
-        justify-content: space-evenly;
-        align-content: center;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 10%;
-
     }
 
 
     div.minaazul img {
-        height: 540px;
-        width: 490px;
-        display: inline;
-        top: 70px;
-        left: 70px;
+        height: 357px;
+        width: 335px;
     }
 
 
     /*div camisa*/
 
     div.minaazul {
-
         align-items: center;
-
-
     }
 
 
@@ -731,22 +420,23 @@ nav.link {
 
     .caixa {
         background-color: #0a0a2a;
-        padding: 1%;
+        padding: 4%;
         border-radius: 15px;
-        height: 670px;
+        width: 348px;
         box-shadow: 0 0 20px rgba(233, 199, 7, 0.774);
-        position: relative;
-        top: 700px;
-        width: 630px;
-        right: 500px;
         align-content: center;
-
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        margin-bottom: 30%;
     }
 
     /*preço*/
 
     .preco {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bolder;
         color: #ffcc00;
         margin-bottom: 32px;
@@ -765,7 +455,6 @@ nav.link {
         border-radius: 10px;
         margin-bottom: 40px;
         cursor: default;
-
     }
 
     /*Tamanho*/
@@ -793,23 +482,22 @@ nav.link {
 
 
     .caixa #nome-produto {
-        font-size: 230%;
+        font-size: 30px;
         /* margin-bottom: 30px; */
         color: #e9c80cf8;
         cursor: default;
-        margin-bottom: 40px;
-        margin-right: 500px;
+      
 
     }
 
     .caixa #descricao-produto {
-        font-size: 144%;
-        margin-bottom: 100px;
+        font-size: 15px;
+        /* margin-bottom: 100px; */
         color: #e3e3e3;
-        margin-top: 18px;
+        /* margin-top: 18px; */
         cursor: default;
-
     }
+    
 
     div.caixa #botaocompra {
         font-size: 30px;
@@ -829,24 +517,6 @@ nav.link {
 
     }
 
-    ul#listamenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    #menu {
-        display: block;
-        /* Exibe o menu */
-        color: #e5e900;
-        align-items: center;
-        position: relative;
-        top: -37px;
-        left: 35px;
-        margin-bottom: 1px;
-
-    }
 
     nav.link {
         display: flex;
@@ -859,7 +529,5 @@ nav.link {
 
     }
 
-
->>>>>>> 876c31b5c4d89705f27e549c73c6b59a4832c538
 
 }
